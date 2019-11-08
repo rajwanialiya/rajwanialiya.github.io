@@ -1,29 +1,31 @@
 <template>
   <div class="view-wrap">
-    <div class="project"> 
-      <div class="image">
-          <h2 class="textOverlay">Read More</h2>
-          <a href="pages/flashfoodSite.html"><img src="assets/Website-Mockup.png"></a>
-      </div>
-      <div class="description1">
-        <p class="category">Web Development & UI/UX</p>
-        <h2 class="title">Flashfood.com</h2>
-        <div id="description">
-          <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
-          <div class="next">
-            <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
-            <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
-          </div>
+    <div class="view-content">
+        <div class="project"> 
+            <div class="image">
+                <h2 class="textOverlay">Read More</h2>
+                <a href="pages/flashfoodSite.html"><img src="assets/Website-Mockup.png"></a>
+            </div>
+            <div class="description1">
+                <p class="category">Web Development & UI/UX</p>
+                <h2 class="title">Flashfood.com</h2>
+                <div id="description">
+                <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
+                <div class="next">
+                    <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
+                    <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
+                </div>
+                </div>
+                <ul class="skills">
+                <slot name="skills"></slot>
+                </ul>
+                <div class="nextMobile">
+                <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
+                <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
+                </div>
+                <!-- <div class="moreDiv"><button onclick="window.location.href='pages/flashfoodSite.html'" class="more">Read More →</button></div> -->
+            </div>
         </div>
-        <ul class="skills">
-          <slot name="skills"></slot>
-        </ul>
-        <div class="nextMobile">
-          <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
-          <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
-        </div>
-        <!-- <div class="moreDiv"><button onclick="window.location.href='pages/flashfoodSite.html'" class="more">Read More →</button></div> -->
-      </div>
     </div>
   </div>
 </template>
