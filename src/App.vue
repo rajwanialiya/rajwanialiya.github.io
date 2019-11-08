@@ -2,8 +2,8 @@
   <div id="app">
     <nav-bar></nav-bar>
     <socials></socials>
-    <intro></intro>
-    <project-left></project-left>
+    <intro class="section"></intro>
+    <project-left class="section"></project-left>
   </div>
 </template>
 
@@ -31,8 +31,21 @@ export default {
 
 <style>
 .view-wrap {
+  width: 100vw;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.view-content {
   max-width: 1200px;
   margin: 0 0; 
   overflow: hidden;
+}
+
+.section {
+  width: 100vw; 
+  height: 100vh; 
 }
 </style>
