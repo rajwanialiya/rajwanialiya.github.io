@@ -31,7 +31,68 @@
               <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
               <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
             </div>
-            <div class="empty"></div>
+          </div>
+      </template>
+    </project-left>
+    <project-right class="section">
+      <template slot="description">
+        <div>
+          <div class="intro">
+            <p>Web Development & Back-End</p>
+            <h2>Food Waste Counter</h2>
+          </div>
+          <div class="main">
+            <div>
+              <a href="pages/flashfoodSite.html" class="visit two"><img src="./components/assets/casestudy.svg"></a>
+              <a href="https://www.flashfood.com/" target="_blank" class="visit two"><img src="./components/assets/globe.svg"></a>
+            </div>
+            <p class="blurb">My task was to create a count-up to display the amount of food waste diverted from landfills by Flashfood users, in real-time. This project involved pulling statistics from the Flashfood database to update the counter regularly, creating an API endpoint to reference when embedding the counter, and animating the count-up to increase interactivity.</p>
+          </div>
+          <ul class="skills second">
+              <li>Javascript</li>
+              <li>SQL</li>
+              <li>HTML</li>
+              <li>Node.js</li>
+              <li>Git</li>
+          </ul>
+          <div class="nextMobile">
+            <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
+            <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
+          </div>
+        </div>
+        <div class="image">
+          <a href="pages/counter.html"><img src="./components/assets/Website-Mockup.png"></a>
+        </div>
+      </template>
+    </project-right>
+    <project-left class="section">
+      <template slot="description">
+        <div class="image">
+          <a href="pages/flashfoodSite.html"><img src="./components/assets/Website-Mockup.png"></a>
+        </div>
+        <div>
+          <div class="intro">
+            <p>App Development & UI/UX</p>
+            <h2>Nailed It</h2>
+          </div>
+          <div class="main">
+            <p class="blurb">“Nailed It” is a collaboratively developed app that won second place at the TechXplore Healthcare & AI hackathon. The app uses open-source machine learning libraries and Python to perform early-stage diagnosis of anemia, oxygen deprivation illnesses, and various infections by analyzing the colour discrepancy between users' skin and nails.</p>
+            <div>
+              <a href="pages/flashfoodSite.html" class="visit"><img src="./components/assets/casestudy.svg"></a>
+              <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="./components/assets/globe.svg"></a>
+            </div>
+            </div>
+            <ul class="skills">
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>UI</li>
+                <li>UX</li>
+                <li>Figma</li>
+            </ul>
+            <div class="nextMobile">
+              <a href="pages/flashfoodSite.html" class="visit"><img src="assets/casestudy.svg"></a>
+              <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="assets/globe.svg"></a>
+            </div>
           </div>
       </template>
     </project-left>
@@ -40,9 +101,10 @@
 
 <script>
 import nav from './components/nav'
-import firstView from './components/firstView'
+import intro from './components/intro'
 import socials from './components/socials'
 import projectLeft from './components/project-left'
+import projectRight from './components/project-right'
 
 export default {
   name: 'app',
@@ -51,12 +113,20 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   }, 
+  mounted: function () {
+    this.cursor()
+  },
   components: {
     'nav-bar': nav, 
-    'intro': firstView, 
+    'intro': intro, 
     'socials': socials, 
-    'project-left': projectLeft
-  }
+    'project-left': projectLeft, 
+    'project-right': projectRight
+  }, 
+  methods: {
+    cursor: function () {
+      //https://codepen.io/chrisdoble/pen/WQLLVp
+    }
 }
 </script>
 
