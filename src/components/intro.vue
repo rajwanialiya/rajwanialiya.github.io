@@ -1,5 +1,5 @@
 <template>
-  <div id="fullpage">
+  <div>
       <ul id="scene">
         <li class="layer" data-depth="0.3">
           <img id="moon" src="./assets/circle.svg">
@@ -32,7 +32,6 @@
         </li>
       </ul>  
     </div> 
-  </div>
 </template>
 
 
@@ -82,13 +81,11 @@ export default {
 </script>
 
 <style> 
-#fullpage {
-  width: 100vw; 
-}
 #scene {
   overflow: hidden; 
   height: 100vh; 
   background-color: #d6e2f5; 
+  width: 100vw;
 }
 
 li {

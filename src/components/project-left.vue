@@ -34,9 +34,20 @@ export default {
     position: relative;
 }
 
-.blurb{ 
+/* .blurbContainer {
+    min-width: 25vw; 
+    min-height: 30vh; 
+} */
+
+.blurb { 
     background-color: rgba(243, 247, 253, 0.9);  
     padding: 20px 30px; 
+    /* position: absolute;
+    width: 35vw; */
+}
+
+.rightSpace {
+    right: 4vw;
 }
 
 .image img:hover{ 

@@ -15,6 +15,7 @@
     "parallax-js": "^3.1.0",
     "typed.js": "^2.0.11",
     "vue": "^2.6.10",
+    "vue-fullpage.js": "^0.1.4",
     "vue-parallax-js": "^0.2.3",
     "vue-router": "^3.1.3"
   },

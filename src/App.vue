@@ -2,8 +2,8 @@
   <div id="app">
     <nav-bar></nav-bar>
     <socials></socials>
-    <intro class="section"></intro>
-    <div class="body">
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <intro class="section intro"></intro>
       <project-left class="section">
         <template slot="description">
           <div class="image">
@@ -15,7 +15,9 @@
               <h2>Flashfood.com</h2>
             </div>
             <div class="main">
-              <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
+              <div class="blurbContainer">
+                <p class="blurb rightSpace">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
+              </div>
               <div>
                 <a href="pages/flashfoodSite.html" class="visit"><img src="./components/assets/casestudy.svg"></a>
                 <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="./components/assets/globe.svg"></a>
@@ -97,7 +99,7 @@
             </div>
         </template>
       </project-left>
-    </div>
+    </full-page>
   </div>
 </template>
 
@@ -110,9 +112,14 @@ import projectRight from './components/project-right'
 
 export default {
   name: 'app',
-  data () {
-    return {}
-  }, 
+  data() {
+    return {
+      options: {
+        licenseKey: 'aNCq80A^r0',
+        menu: '#menu',
+      },
+    }
+  },
   components: {
     'nav-bar': nav, 
     'intro': intro, 
@@ -120,14 +127,17 @@ export default {
     'project-left': projectLeft, 
     'project-right': projectRight
   }, 
-  methods: {
-      //https://codepen.io/chrisdoble/pen/WQLLVp
-    }
-  }
+}
 
 </script>
 
 <style>
+.fp-tableCell {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
 .view-wrap {
   width: 100vw;
   display: flex; 
