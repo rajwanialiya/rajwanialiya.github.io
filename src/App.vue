@@ -7,7 +7,7 @@
       <project-left class="section">
         <template slot="description">
           <div class="image">
-            <router-link to="/pages/flashfood-site.vue"><img src="./components/assets/Website-Mockup.png"></router-link>
+            <router-link to="flashfood-site"><img src="./components/assets/Website-Mockup.png"></router-link>
           </div>
           <div>
             <div class="intro">
@@ -100,6 +100,7 @@
         </template>
       </project-left>
     </full-page>
+    <router-view/>
   </div>
 </template>
 
