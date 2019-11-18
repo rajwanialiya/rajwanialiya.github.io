@@ -1,12 +1,14 @@
 <template>
-  <h1>HEY</h1>
+  <div>
+    <h1>SIDENAV</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'flashfood-site',
+  name: 'side-nav',
   data () {
     return {}
-  } 
+  }
 }
 </script>
