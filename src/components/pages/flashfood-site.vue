@@ -1,5 +1,8 @@
 <template>
-  <side-nav></side-nav>
+  <div>
+    <side-nav></side-nav>
+    <div class="fill"></div>
+  </div>
 </template>
 
 <script>
@@ -15,3 +18,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .fill {
+    min-height: 1200px;
+    width: 100%;
+    background-color: red; 
+  }
+</style>
