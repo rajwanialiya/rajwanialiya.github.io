@@ -1,5 +1,6 @@
 <template>
   <div>
+    <canvas id="canvas"></canvas>
     <nav-bar></nav-bar>
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
@@ -129,3 +130,16 @@ export default {
   }, 
 }
 </script>
+
+<style>
+#canvas {
+  position: fixed;
+  width: 100vw; 
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(87, 28, 28, 0.4)
+}
+</style>
