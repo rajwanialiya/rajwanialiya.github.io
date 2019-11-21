@@ -140,6 +140,6 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(87, 28, 28, 0.4)
+  /* background-color: rgba(87, 28, 28, 0.4) */
 }
 </style>
