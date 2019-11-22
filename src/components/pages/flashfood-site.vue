@@ -23,6 +23,6 @@ export default {
   .fill {
     min-height: 1200px;
     width: 100%;
-    background-color: red; 
+    // background-color: red; 
   }
 </style>

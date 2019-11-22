@@ -1,6 +1,6 @@
 <template>
-  <b-nav :class="{ hide: hide }" ref="navbar" class="navbar navbar-expand-sm navbar-light bg-light">
-    <b-navbar-brand href="#">Aliya Rajwani</b-navbar-brand>
+  <b-nav :class="{ hide: hide }" ref="navbar" class="navbar navbar-expand-sm navbar-light bg-none">
+    <b-navbar-brand><router-link to="/">Aliya Rajwani</router-link></b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
@@ -65,12 +65,16 @@ export default {
   z-index: 100; 
 }
 
-.bg-light {
-  background-color: rgba(255,255,255, 0) !important; 
+.navbar-brand {
+  font-size: 1.4rem;
 }
 
 button.navbar-toggler {
   border-color: transparent; 
+}
+
+.dropdown-menu-right {
+  background-color: transparent; 
 }
 
 ul.dropdown-menu {
