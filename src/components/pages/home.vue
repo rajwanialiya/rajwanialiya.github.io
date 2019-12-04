@@ -118,6 +118,7 @@ export default {
       options: {
         licenseKey: 'aNCq80A^r0',
         menu: '#menu',
+        scrollingSpeed: 1100,
       },
     }
   },

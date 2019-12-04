@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll">
+  <div class="scroll" :class="opacity">
     <div class="socials linkedin"><a href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/" target="_blank" class="linkedin"></a></div>
     <div class="socials github"><a href="https://github.com/rajwanialiya" target="_blank" class="github"></a></div>
     <div class="socials email"><a href="mailto:rajwani.aliya@gmail.com" class="email"></a></div>
@@ -17,9 +17,9 @@
 export default {
   name: 'socials',
   data () {
-    return {
-    }
-  }
+    return {}
+  }, 
+  props: ['opacity']
 }
 </script>
 
@@ -35,32 +35,39 @@ export default {
 }
 
 .socials {
-  background-image: url('./assets/social_icons@2x.png');
-  background-size: 167px 40px;
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 12px;
+  background-size: cover;
 }
 
 .github {
-  background-position: -1px;
+  background-image: url('./assets/github.png');
+  width: 35px;
+  height: 35px;
 }
 
 .linkedin {
-  background-position: -41px; 
+  background-image: url('./assets/linkedin.png');
+  width: 35px;
+  height: 35px;
 }
 
 .mouse {
-  background-position: -84px; 
+  background-image: url('./assets/mouse.png');
+  margin-bottom: 25px
 }
 
 .email {
-  background-position: -125px;
+  background-image: url('./assets/mail.png');
 }
 
 .line line {
-    stroke-width: 2px; 
-    stroke: black; 
+  stroke-width: 2px; 
+  stroke: black; 
+}
+
+.opacity {
+  opacity: 0.6;
 }
 </style>
