@@ -10,6 +10,27 @@
         </div>
         <p><slot name="description"></slot></p>
       </div>
+      <div class="logo"><slot name="logo"></slot></div>
+      <div class="overview">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>Role</h5>
+            <slot name="role"></slot>
+          </div>
+          <div class="col-md-3">
+            <h5>Timeline</h5>
+            <slot name="timeline"></slot>
+          </div>
+          <div class="col-md-3">
+            <h5>Challenge</h5>
+            <slot name="challenge"></slot>
+          </div>
+          <div class="col-md-3">
+            <h5>Tools</h5>
+            <slot name="tools"></slot>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
     <!-- <div id="display">
@@ -25,25 +46,8 @@
   <div class="darken"></div>
   <a class="back" href="../index.html"><img class="arrow" src="../assets/arrow.svg"></a> -->
   
-  <div class="side">
-      <div class="progress-container">
-          <div class="progress-bar" id="myBar"></div>
-      </div>  
-  </div>
-  <div class="header" id="BackToTop"></div>
+  <div id="BackToTop"></div>
   <div id="caseStudy">
-      <div class="intro">
-          <div class="title">
-              <h2>Flashfood Main Website</h2>
-              <p>Web Development & UI/UX</p>
-          </div>
-          <div class="description">
-              <p>As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
-          </div>
-      </div>
-      <div class="logoContainer"> 
-        <img class="logo" src="./assets/flashfood.png"/>
-      </div>
       <div class="overview">
           <div class="role">
               <p>Role</p>
@@ -250,6 +254,10 @@ export default {
 </script>
 
 <style scoped>
+p, h4, h5, h6 {
+  color: gray;
+}
+
 .page-wrap {
   max-width: 100%;
   display: flex;
@@ -257,8 +265,7 @@ export default {
   align-items: flex-end;
 }
 
-.page-content {
-  height: 500px; 
+.page-content { 
   width: 90vw;
   display: flex; 
   flex-direction: column;
@@ -281,5 +288,22 @@ export default {
 
 .intro > p {
   width: 80%;
+}
+
+.logo {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.logo > * {
+  position: relative;
+  top: 50px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.overview {
+  width: 100%;
+  padding: 40px 0
 }
 </style>
