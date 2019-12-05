@@ -47,7 +47,7 @@ export default {
 
 .nav-link, .nav-link:hover {
   font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0);
   padding: 0;
 }
 
@@ -63,8 +63,8 @@ export default {
   background-size: contain; 
   background-position: center;
   height: 30px;
-  width: 30px;
-  opacity: 0.4;
+  min-width: 30px;
+  // opacity: 0.4;
   margin-right: 5px;
 }
 

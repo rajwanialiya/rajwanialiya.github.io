@@ -41,8 +41,7 @@ import Typed from 'typed.js'
 export default {
   name: 'intro',
   data () {
-    return {
-    }
+    return {}
   }, 
   mounted: function () {
     this.parallax()

@@ -1,7 +1,7 @@
 <template>
   <div>
     <side-nav></side-nav>
-    <socials opacity="opacity"></socials>
+    <socials></socials>
     <project>
       <template slot="img"><img src='../assets/project1-header.svg'></template>
       <template slot="title">Flashfood Main Website</template>
@@ -23,8 +23,47 @@
         <p>JavaScript CSS</p>
         <p>HTML Webflow</p>
       </template>
+      <template slot="goals">
+        <div class="row">
+          <div class="col">
+            <p class="adj">improve</p>
+            <h4>Brand Alignment</h4>
+            <hr>
+            <p>One of the main objectives I aimed to achieve through this project was to ensure that the company’s main website was congruent with other aspects of marketing to ensure a strong, consistent and sustainable brand.</p>
+          </div>
+          <div class="col">
+            <p class="adj">build</p>
+            <h4>Scaling Solution</h4>
+            <hr>
+            <p>It was necessary to build a scalable solution to ensure minor changes can be made quickly and easily as Flashfood grows and it's brand evolves.</p>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="adj">increase</p>
+            <h4>Site Conversion Rate</h4>
+            <hr>
+            <p>In this case, website conversions in three forms were used to increase action; app downloads, location request submissions, and news subscriptions and notifications.</p>
+          </div>
+          <div class="col">
+            <p class="adj">increase</p>
+            <h4>Brand Awareness</h4>
+            <hr>
+             <p>Flashfood.com serves an informational purpose; educate users about the solution being offered. The updated website was designed to clearly explain the solution by combing eye-catching visual elements with concise copy. </p>
+          </div>
+        </div>
+      </template>
+      <template slot="requirements">
+        <div class="animation">
+          <span id="typed"></span>
+        </div>
+      </template>
+      <template slot="other">
+      <div class="comp">
+        <h2>Competitive Analysis</h2>
+      </div>
+      </template>
     </project>
-    <div class="fill"></div>
   </div>
 </template>
 
@@ -32,6 +71,7 @@
 import sideNav from '../side-nav'
 import project from '../project'
 import socials from '../socials'
+import Typed from 'typed.js'
 
 export default {
   name: 'flashfood-site',
@@ -42,10 +82,52 @@ export default {
     'side-nav': sideNav,
     'project': project, 
     'socials': socials
+  }, 
+  mounted: function () {
+    this.typed()
+  },
+  methods: {
+    typed: function () {
+      var one = "Must be responsive and accessible on multiple screen sizes"
+      var two = "Information must be presented in a clear and concise manner"
+      var three = "Must be available in both French and English"
+      var four = "Must encourage visitors to input their contact information into one of the available fields"
+      var five = "Should reflect the company’s culture and commitment to positive global change"
+      var six = "Must reduce friction points and provide multiple entry points to all webpages"
+
+      var text = [one, two, three, four, five, six]
+      var typed = new Typed("#typed", {
+        strings: text,
+        typeSpeed: 20,
+        backSpeed: 40,
+        backDelay: 1000,
+        startDelay: 500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '_',
+        autoInsertCss: true,
+        smartBackspace: true
+      });
+    }
   }
 }
 </script>
 
 <style scoped>
+.adj, .col > h3 {
+  margin-bottom: 0;
+}
 
+.adj {
+  margin-top: 0.7em;
+  color: rgba(233, 110, 130, 1)
+}
+
+hr {
+  margin-top: 0.5em;
+}
+
+.comp {
+  margin-top: 40px;
+}
 </style>

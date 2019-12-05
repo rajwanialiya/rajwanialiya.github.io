@@ -6,7 +6,7 @@
       <div class="intro">
         <div class="title">
           <h2><slot name="title"></slot></h2>
-          <h6><slot name="category"></slot></h6>
+          <p><slot name="category"></slot></p>
         </div>
         <p><slot name="description"></slot></p>
       </div>
@@ -14,25 +14,34 @@
       <div class="overview">
         <div class="row">
           <div class="col-md-3">
-            <h5>Role</h5>
+            <h5 class="black">Role</h5>
             <div class="list"><slot name="role"></slot></div>
           </div>
           <div class="col-md-3">
-            <h5>Timeline</h5>
+            <h5 class="black">Timeline</h5>
             <div class="list"><slot name="timeline"></slot></div>
           </div>
           <div class="col-md-3">
-            <h5>Challenge</h5>
+            <h5 class="black">Challenge</h5>
             <div class="list"><slot name="challenge"></slot></div>
           </div>
           <div class="col-md-3">
-            <h5>Tools</h5>
+            <h5 class="black">Tools</h5>
             <div class="list"><slot name="tools"></slot></div>
           </div>
-          <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
-          <p>https://encry.com/use-cases/</p>
+          <!-- <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
+          <p>https://encry.com/use-cases/</p> --> 
         </div>
       </div>
+      <div class="goals">
+        <h2>Project Goals</h2>
+        <slot name="goals"></slot>
+      </div>
+      <div class="requirements">
+        <h2>Requirements</h2> 
+        <slot name="requirements"></slot>
+      </div>
+      <slot class="other" name="other"></slot>
     </div>
   </div>
     <!-- <div id="display">
@@ -49,43 +58,6 @@
   <a class="back" href="../index.html"><img class="arrow" src="../assets/arrow.svg"></a> -->
   
   <div id="BackToTop"></div>
-      <div class="writing">
-          <!-- Section 1 -->
-          <h2>Project Goals</h2>
-          <p>The redesign of Flashfood's main website was carried out to meet the following objectives.</p>
-          <div class="columns">
-              <div>
-                  <h4>Improve Brand Alignment</h4>
-                  <p>As Flashfood grew to reach a wider audience, its brand evolved. One of the main objectives we aimed to achieve through this project was to ensure that the company’s main website was congruent with other aspects of marketing to ensure a strong, consistent and sustainable brand. Throughout the updated website, Flashfood’s informal yet trust-worthy and reliable brand is emphasized with a consistent copy tone and common visual elements. </p>
-              </div>
-              <div>
-                  <h4>Increase Website Conversion Rate</h4>
-                  <p>In this case, website conversions can occur in three forms; app downloads, location request submissions, and news subscriptions and notifications. To optimize these conversion rates, call-to-action buttons, statistics to perpetuate the need for change, and a real-time counter to display the food waste diverted through Flashfood’s services were included throughout the site. </p>
-              </div>
-          </div>
-          <div class="columns">
-              <div>
-                  <h4>Increase Awareness</h4>
-                  <p>Among other objectives, Flashfood.com serves an informational purpose;  educate users about the solution being offered. The updated website was designed to clearly explain the solution by combing eye-catching visual elements with concise copy. </p>
-              </div>
-              <div>
-                  <h4>Build a Scaling Solution</h4>
-                  <p>As Flashfood grows further, aspects of the brand will continue to evolve. For this reason, it was necessary to build a scalable solution to ensure minor changes can be made quickly and easily. To do this, layouts that can be used consistently were created, and recurring elements were pre-formatted. </p>
-              </div>
-          </div>
-          <!-- Section 2 -->
-          <div>
-              <h2>Requirements</h2>
-              <p>After reviewing the goals and project limitations, a list of requirements to be met by the redesign, was drafted. </p>
-              <ul class="requirements"> 
-                  <li>Must be responsive and accessible on multiple devices spanning from desktop to mobile</li>
-                  <li>Must be available in both French and English</li>
-                  <li>Must encourage visitors to input their contact information (email address) into one of the available fields to optimize conversion rates</li>
-                  <li>Information must be presented in a clear and concise manner to retain the visitor’s attention, as the existing solution is dense and can be overwhelming</li>
-                  <li>The overall web experience should reflect the company’s culture and commitment to positive global change</li>
-                  <li>Must reduce friction points and provide multiple entry points to all webpages to encourage the user’s journey</li>
-              </ul>
-          </div>
           <!-- Section 3 -->
           <h2 style="padding-top: 12px">Competitive Analysis</h2>
           <p>In order to gain a better sense of what a website that met the above requirements looked like, I analyzed and compared aspects of existing websites that aimed to meet similar objectives. This included websites that fulfilled the purposes of informing users of a product or service being offered and converting web visitors, and websites of growing companies. The following are some of the successful web elements from which inspiration was drawn. </p>
@@ -218,22 +190,23 @@
 </template>
 
 <script>
+import Typed from 'typed.js'
+
 export default {
   name: 'project',
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
 <style scoped>
-h5, h6 {
-  color: gray;
+.black {
+  color: black !important;
 }
 
-body {
-  color: #090909;
+p, .gray {
+  color: #6D6D6D;
 }
 
 .page-wrap {
@@ -261,10 +234,12 @@ body {
 
 .intro {
   display: flex;
+  max-width: 900px;
 }
 
 .intro > p {
   width: 80%;
+  margin-left: 20px;
 }
 
 .logo {
@@ -281,6 +256,18 @@ body {
 
 .overview {
   width: 100%;
-  padding: 40px 0
+  padding: 40px 0 0 0
+}
+
+.goals, .requirements {
+  margin-top: 40px;
+  width: 100%;
+}
+
+#typed, .typed-cursor {
+  font-size: 20px; 
+  line-height: 44px; 
+  height: auto;
+  width: 100%;
 }
 </style>
