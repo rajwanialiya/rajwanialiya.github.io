@@ -15,19 +15,23 @@
         <div class="row">
           <div class="col-md-3">
             <h5>Role</h5>
-            <slot name="role"></slot>
+            <div class="list"><slot name="role"></slot></div>
           </div>
           <div class="col-md-3">
             <h5>Timeline</h5>
-            <slot name="timeline"></slot>
+            <div class="list"><slot name="timeline"></slot></div>
           </div>
           <div class="col-md-3">
             <h5>Challenge</h5>
-            <slot name="challenge"></slot>
+            <div class="list"><slot name="challenge"></slot></div>
           </div>
           <div class="col-md-3">
             <h5>Tools</h5>
-            <slot name="tools"></slot>
+            <div class="list"><slot name="tools"></slot></div>
+          </div>
+          <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
+          <p>https://encry.com/use-cases/</p>
+
           </div>
         </div>
       </div>
@@ -47,28 +51,6 @@
   <a class="back" href="../index.html"><img class="arrow" src="../assets/arrow.svg"></a> -->
   
   <div id="BackToTop"></div>
-  <div id="caseStudy">
-      <div class="overview">
-          <div class="role">
-              <p>Role</p>
-              <h6>UX Developer</h6>
-              <h6>Worked with Design Lead</h6>
-              <h6>Guidance by CTO</h6>
-          </div>
-          <div class="timeline">
-              <p>Timeline</p>
-              <h6>6 weeks</h6>
-          </div>
-          <div class="challenge">
-              <p>Challenge</p>
-              <h6>Flashfood.com Redesign</h6>
-          </div>
-          <div class="tools">
-              <p>Tools</p>
-              <h6>JavaScript CSS</h6>
-              <h6>HTML Webflow</h6>
-          </div>
-      </div>
       <div class="writing">
           <!-- Section 1 -->
           <h2>Project Goals</h2>
@@ -96,12 +78,6 @@
           <!-- Section 2 -->
           <div>
               <h2>Requirements</h2>
-              <div class="blob">
-                  <!-- <span class="circle1"></span> -->
-                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
-                      <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"></path>
-                  </svg>
-              </div>
               <p>After reviewing the goals and project limitations, a list of requirements to be met by the redesign, was drafted. </p>
               <ul class="requirements"> 
                   <li>Must be responsive and accessible on multiple devices spanning from desktop to mobile</li>
@@ -254,8 +230,12 @@ export default {
 </script>
 
 <style scoped>
-p, h4, h5, h6 {
+h5, h6 {
   color: gray;
+}
+
+body {
+  color: #090909;
 }
 
 .page-wrap {
@@ -270,8 +250,8 @@ p, h4, h5, h6 {
   display: flex; 
   flex-direction: column;
   align-items: center;
-  padding: 40px;
-  margin-top: 30px;
+  padding: 20px 120px;
+  margin-top: 50px;
 }
 
 .header {
@@ -283,7 +263,6 @@ p, h4, h5, h6 {
 
 .intro {
   display: flex;
-  padding: 0 10vw; 
 }
 
 .intro > p {

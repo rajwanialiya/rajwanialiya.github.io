@@ -8,6 +8,21 @@
       <template slot="category">Web Development & UI/UX</template>
       <template slot="description">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and company's CTO to design and implement a scalable updated main website that reflected these changes.</template>
       <template slot="logo"><img src="../assets/flashfood.png"></template>
+      <template slot="role">
+        <p>UX Developer</p>
+        <p>Worked with Design Lead</p>
+        <p>Guidance by CTO</p>
+      </template>
+      <template slot="timeline">
+        <p>6 weeks</p>
+      </template>
+      <template slot="challenge">
+        <p>Flashfood.com redesign</p>
+      </template>
+      <template slot="tools">
+        <p>JavaScript CSS</p>
+        <p>HTML Webflow</p>
+      </template>
     </project>
     <div class="fill"></div>
   </div>
