@@ -31,8 +31,6 @@
           </div>
           <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
           <p>https://encry.com/use-cases/</p>
-
-          </div>
         </div>
       </div>
     </div>
