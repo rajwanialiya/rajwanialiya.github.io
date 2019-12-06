@@ -62,6 +62,38 @@
       <div class="comp">
         <h2>Competitive Analysis</h2>
       </div>
+      <div class="design">
+        <h2>Design</h2>
+        <div class="row des">
+          <div class="col border-right border-left">
+            <h1 class="lg-font">Ab</h1>
+            <h5>SF Pro Text</h5>
+          </div>
+          <div class="col border-right">
+            <p>Inactive State</p>
+            <button>Button</button>
+            <p>Active State</p>
+            <button>Button</button>
+          </div>
+          <div class="col border-right">
+            <div class="little-img"></div>
+          </div>
+          <div class="col border-right">
+            <div class="colors">
+              <div class="row">
+                <div class="col one"></div>
+                <div class="col two"></div>
+                <div class="col three"></div>
+              </div>
+              <div class="row">
+                <div class="col four"></div>
+                <div class="col five"></div>
+                <div class="col six"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       </template>
     </project>
   </div>
@@ -114,7 +146,7 @@ export default {
 </script>
 
 <style scoped>
-.adj, .col > h3 {
+.adj {
   margin-bottom: 0;
 }
 
@@ -127,7 +159,76 @@ hr {
   margin-top: 0.5em;
 }
 
-.comp {
+.comp, .design {
   margin-top: 40px;
+  width: 100%;
+}
+
+.des {
+  height: 150px;
+}
+
+.des > div {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lg-font {
+  font-size: 5em;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+.little-img {
+  background-image: url('../assets/little-img.svg');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.colors {
+  width: 100%;
+  height: 100%;
+}
+
+.colors > .row {
+  height: 50%;
+}
+
+.one, .two, .three, .four, .five, .six {
+  margin: 10px; 
+  border-radius: 50%;
+  width: 100%;
+}
+
+.one {
+  background-color: rgb(66, 144, 66);
+}
+
+.two {
+  background-color: rgb(51, 51, 51)
+}
+
+.three {
+  background-color: rgb(204, 58, 45)
+}
+
+.four {
+  border-color: rgb(100, 100, 100);
+  border: solid 1px;
+}
+
+.five {
+  background-color: rgb(119, 119, 119)
+}
+
+.six {
+  background-color: rgb(247, 202, 69)
 }
 </style>

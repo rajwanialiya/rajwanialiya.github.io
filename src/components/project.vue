@@ -229,7 +229,7 @@ p, .gray {
   height: 310px;
   width: 100%;
   overflow: hidden;
-  background-color: rgb(66, 144, 66)
+  background-color: rgb(66, 144, 66);
 }
 
 .intro {
