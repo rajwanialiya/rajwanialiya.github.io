@@ -84,11 +84,8 @@
                 <div class="col one"></div>
                 <div class="col two"></div>
                 <div class="col three"></div>
-              </div>
-              <div class="row">
                 <div class="col four"></div>
                 <div class="col five"></div>
-                <div class="col six"></div>
               </div>
             </div>
           </div>
@@ -195,16 +192,14 @@ button {
 .colors {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .colors > .row {
-  height: 50%;
-}
-
-.one, .two, .three, .four, .five, .six {
-  margin: 10px; 
-  border-radius: 50%;
-  width: 100%;
+  height: 100%;
+  padding: 0 20px;
 }
 
 .one {
@@ -220,15 +215,10 @@ button {
 }
 
 .four {
-  border-color: rgb(100, 100, 100);
-  border: solid 1px;
-}
-
-.five {
   background-color: rgb(119, 119, 119)
 }
 
-.six {
+.five{
   background-color: rgb(247, 202, 69)
 }
 </style>
