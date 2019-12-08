@@ -62,6 +62,9 @@
       <div class="comp">
         <h2>Competitive Analysis</h2>
       </div>
+      <div class="planning">
+        <h2>Planning</h2>
+      </div>
       <div class="design">
         <h2>Design</h2>
         <div class="row des">
@@ -89,6 +92,76 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <h2>Challenge</h2>
+        <div class="row">
+          <div class="col-7 img">
+            <img class="border" src="../assets/challenge.png">
+          </div>
+          <div class="col">
+            <p>A challenge I encountered while working on the contact form, was the limit of 5,000 submissions allowed by the website's hosting platform. To overcome this challenge and offer a more long-term and scalable solution, I intercepted the form submissions and validated the form data before creating an HTTP request via AJAX and returning a status message. The form data was then sent to the company’s customer service platform as a pending ticket, where the customer service team could easily respond to inquiries.</p>
+          </div>
+        </div>
+      </div>
+      <div class="results">
+        <h2>Results</h2>
+        <div class="row">
+          <div class="col">
+            <div class="top">
+              <img src="../assets/improve.png">
+              <div>
+                <p class="adj">improved</p>
+                <h4>Brand Alignment</h4>
+              </div>
+            </div>
+            <hr>
+            <ul>
+              <li>Consulted the marketing and product design teams for feedback and outcome</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="top">
+              <img src="../assets/build.png">
+              <div>
+                <p class="adj">built</p>
+                <h4>Scaling Solution</h4>
+              </div>
+            </div>
+            <hr>
+            <ul>
+              <li>Updates were easily made when Flashfood's partnered with over 100 additional grocery stores shortly after the website launch</li>
+            </ul>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="top">
+              <img src="../assets/increase.png">
+              <div>
+                <p class="adj">increased</p>
+                <h4>Site Conversion Rate</h4>
+              </div>
+            </div>
+            <hr>
+            <ul>
+              <li>Email and newsletter subscription rates increased by around 35% after the updated website's launch</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="top">
+              <img src="../assets/increase2.png">
+              <div>
+                <p class="adj">increased</p>
+                <h4>Brand Awareness</h4>
+              </div>
+            </div>
+            <hr>
+            <ul>
+              <li>All key information has been presented in blurbs of less than three sentences</li>
+            </ul>
+          </div>          
         </div>
       </div>
       </template>
@@ -135,7 +208,7 @@ export default {
         showCursor: true,
         cursorChar: '_',
         autoInsertCss: true,
-        smartBackspace: true
+        smartBackspace: true, 
       });
     }
   }
@@ -156,8 +229,13 @@ hr {
   margin-top: 0.5em;
 }
 
-.comp, .design {
+.comp, .design, .results, .planning {
   margin-top: 40px;
+  width: 100%;
+}
+
+.challenge {
+  margin-top: 80px;
   width: 100%;
 }
 
@@ -218,7 +296,28 @@ button {
   background-color: rgb(119, 119, 119)
 }
 
-.five{
+.five {
   background-color: rgb(247, 202, 69)
+}
+
+.challenge > .row {
+  display: flex; 
+  align-items: center;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.top > img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 20px;
 }
 </style>

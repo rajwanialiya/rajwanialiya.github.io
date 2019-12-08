@@ -16,6 +16,10 @@ export default {
 </script>
 
 <style>
+body {
+  line-height: 1.7em;
+}
+
 .fp-tableCell {
   display: flex;
   justify-content: center;
