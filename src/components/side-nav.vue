@@ -1,12 +1,12 @@
 <template>
   <div id="sidebar" class="col-sm-1">
     <div class="top">
-      <b-navbar-brand><router-link to="/">Aliya Rajwani</router-link></b-navbar-brand>
+      <b-navbar-brand class="nav-item invert"><router-link to="/">Aliya Rajwani</router-link></b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#work">Work</b-nav-item>
-        <b-nav-item href="https://drive.google.com/file/d/1hV2jvH8frgEkRwzt3V2eXakpKQDCh5tD/view?usp=sharing" target="_blank">Resume</b-nav-item>
-        <b-nav-item class="talk" href="mailto:rajwani.aliya@gmail.com">
+        <b-nav-item class="nav-item invert" href="#">Home</b-nav-item>
+        <b-nav-item class="nav-item invert" href="#work">Work</b-nav-item>
+        <b-nav-item class="nav-item invert" href="https://drive.google.com/file/d/1hV2jvH8frgEkRwzt3V2eXakpKQDCh5tD/view?usp=sharing" target="_blank">Resume</b-nav-item>
+        <b-nav-item class="talk nav-item invert" href="mailto:rajwani.aliya@gmail.com">
           <div></div>
          <!-- Let's Talk -->
         </b-nav-item>
@@ -66,6 +66,10 @@ export default {
   min-width: 30px;
   // opacity: 0.4;
   margin-right: 5px;
+}
+
+.invert {
+  filter: invert(100%);
 }
 
 /*

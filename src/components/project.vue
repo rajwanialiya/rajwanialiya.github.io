@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrap">
-    <div class="header"><slot name="img"></slot></div>
+    <div id="header" class="header"><slot name="img"></slot></div>
     <div class="page-content">
       <div class="intro">
         <div class="title">
@@ -33,11 +33,9 @@
         </div>
       </div>
       <div class="goals">
-        <h2>Project Goals</h2>
         <slot name="goals"></slot>
       </div>
       <div class="requirements">
-        <h2>Requirements</h2> 
         <slot name="requirements"></slot>
       </div>
       <slot class="other" name="other"></slot>
@@ -64,6 +62,23 @@ export default {
   name: 'project',
   data () {
     return {}
+  }, 
+  created: function () {
+    window.addEventListener('scroll', this.colorChange)
+  }, 
+  methods: {
+    colorChange: function () {
+      var header = document.querySelector('.header')
+      var navItems = document.querySelectorAll('.nav-item')
+
+      for (var i = 0; i < navItems.length; i++) {
+        if (header.getBoundingClientRect().bottom + 20 > navItems[i].getBoundingClientRect().bottom) {
+          navItems[i].classList.add('invert')
+        } else if (header.getBoundingClientRect().bottom - 20 < navItems[i].getBoundingClientRect().bottom) {
+          navItems[i].classList.remove('invert')
+        }
+      }
+    }
   }
 }
 </script>

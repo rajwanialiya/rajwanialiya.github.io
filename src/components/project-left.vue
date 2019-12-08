@@ -19,83 +19,75 @@ export default {
 
 <style>
 .portfolio {
-    text-align: right;
-    display: flex; 
+  text-align: right;
+  display: flex; 
 }
 
 .intro {
-    display: block
+  display: block
 }
 
 .main {
-    display: flex;
-    justify-content: flex-end; 
-    margin: 20px 0;
-    position: relative;
+  display: flex;
+  justify-content: flex-end; 
+  margin: 20px 0;
+  position: relative;
 }
 
-/* .blurbContainer {
-    min-width: 25vw; 
-    min-height: 30vh; 
-} */
-
 .blurb { 
-    background-color: rgba(243, 247, 253, 0.9);  
-    padding: 20px 30px; 
-    /* position: absolute;
-    width: 35vw; */
+  background-color: rgba(243, 247, 253, 0.9);  
+  padding: 20px 30px; 
+  width: 350px;
 }
 
 .rightSpace {
-    right: 4vw;
+  right: 4vw;
 }
 
 .image img:hover{ 
-    opacity: 0.4; 
+  opacity: 0.4; 
 }
 
 .image a{
-    width: 100%; 
-    height: 100%; 
+  width: 100%; 
+  height: 100%; 
 }
 
 .image img{
-    width: 100%; 
-    position: relative; 
-    /* -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);  */
+  width: 100%; 
+  position: relative; 
 }
 
 .visit{
-    justify-content: flex-end;
-    align-items: flex-end;
-    display: flex;
-    width: 30px; 
-    margin-left: 20px; 
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  width: 30px; 
+  margin-left: 20px; 
 }
 
 .visit img {
-    margin-bottom: 5px;
-    width: 100%; 
+  margin-bottom: 5px;
+  width: 100%; 
 }
 
 .visit img:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .nextMobile{
-    display: none; 
+  display: none; 
 }
 
 .skills{
-    display: flex; 
-    flex-direction: row; 
-    list-style-type: none;
-    justify-content: flex-end; 
+  display: flex; 
+  flex-direction: row; 
+  list-style-type: none;
+  justify-content: flex-end; 
 }
 
 .skills li {
-    margin-right: 0.7em; 
+  margin-right: 0.7em; 
 }
 
 </style>

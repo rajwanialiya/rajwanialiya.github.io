@@ -24,6 +24,7 @@
         <p>HTML Webflow</p>
       </template>
       <template slot="goals">
+        <h2>Project Goals</h2>
         <div class="row">
           <div class="col">
             <p class="adj">improve</p>
@@ -54,14 +55,14 @@
         </div>
       </template>
       <template slot="requirements">
+        <h2>Requirements</h2>
         <div class="animation">
           <span id="typed"></span>
         </div>
       </template>
       <template slot="other">
       <div class="comp">
-        <h2>Competitive Analysis</h2>
-      </div>
+        <h2>Competitive Analysis</h2></div>
       <div class="planning">
         <h2>Planning</h2>
       </div>

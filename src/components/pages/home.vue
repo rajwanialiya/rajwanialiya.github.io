@@ -50,7 +50,7 @@
                 <a href="pages/flashfoodSite.html" class="visit two"><img src="../assets/casestudy.svg"></a>
                 <a href="https://www.flashfood.com/" target="_blank" class="visit two"><img src="../assets/globe.svg"></a>
               </div>
-              <p class="blurb">My task was to create a count-up to display the amount of food waste diverted from landfills by Flashfood users, in real-time. This project involved pulling statistics from the Flashfood database to update the counter regularly, creating an API endpoint to reference when embedding the counter, and animating the count-up to increase interactivity.</p>
+              <p class="blurb">This real-time counter displays the amount of food waste diverted from landfills by Flashfood users. To build this feature I connected the counter to the Flashfood database, created an API endpoint to embed the counter, and designed and animated the count-up to increase interactivity.</p>
             </div>
             <ul class="skills second">
                 <li>Javascript</li>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="image">
-            <a href="pages/counter.html"><img src="../assets/Website-Mockup.png"></a>
+            <router-link to="flashfood-counter"><img src="../assets/Website-Mockup.png"></router-link>
           </div>
         </template>
       </project-right>
