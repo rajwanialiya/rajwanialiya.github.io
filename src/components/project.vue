@@ -92,6 +92,10 @@ p, .gray, li, span {
   color: #6D6D6D;
 }
 
+hr {
+  margin-top: 0.5em;
+}
+
 .page-wrap {
   max-width: 100%;
   display: flex;

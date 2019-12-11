@@ -61,110 +61,164 @@
         </div>
       </template>
       <template slot="other">
-      <div class="comp">
-        <h2>Competitive Analysis</h2></div>
-      <div class="planning">
-        <h2>Planning</h2>
-      </div>
-      <div class="design">
-        <h2>Design</h2>
-        <div class="row des">
-          <div class="col border-right border-left">
-            <h1 class="lg-font">Ab</h1>
-            <h5>SF Pro Text</h5>
-          </div>
-          <div class="col border-right">
-            <p>Inactive State</p>
-            <button>Button</button>
-            <p>Active State</p>
-            <button>Button</button>
-          </div>
-          <div class="col border-right">
-            <div class="little-img"></div>
-          </div>
-          <div class="col border-right">
-            <div class="colors">
-              <div class="row">
-                <div class="col one"></div>
-                <div class="col two"></div>
-                <div class="col three"></div>
-                <div class="col four"></div>
-                <div class="col five"></div>
+        <div class="comp">
+          <h2>Competitive Analysis</h2>
+          <div>
+          <b-carousel
+            id="carousel-1"
+            v-model="slide"
+            :interval="4000"
+            controls
+            indicators
+            background="#ababab"
+            img-width="1024"
+            img-height="480"
+            style="text-shadow: 1px 1px 2px #333;"
+            @sliding-start="onSlideStart"
+            @sliding-end="onSlideEnd"
+          >
+            <!-- Text slides with image -->
+            <b-carousel-slide>
+              <img class="slide" src='../assets/hero.png'>
+              <div class="text">
+                <p>Hey hey hey hey hey hey hey</p>
+              </div>
+            </b-carousel-slide>
+
+            <!-- Slides with custom text -->
+            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
+              <h1>Hello world!</h1>
+            </b-carousel-slide>
+
+            <!-- Slides with image only -->
+            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+
+            <!-- Slides with img slot -->
+            <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+            <b-carousel-slide>
+              <template v-slot:img>
+                <img
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="480"
+                  src="https://picsum.photos/1024/480/?image=55"
+                  alt="image slot"
+                >
+              </template>
+            </b-carousel-slide>
+
+            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
+                a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
+              </p>
+            </b-carousel-slide>
+          </b-carousel>
+        </div>
+        </div>
+        <div class="planning">
+          <h2>Planning</h2>
+        </div>
+        <div class="design">
+          <h2>Design</h2>
+          <div class="row des">
+            <div class="col border-right border-left">
+              <h1 class="lg-font">Ab</h1>
+              <h5>SF Pro Text</h5>
+            </div>
+            <div class="col border-right">
+              <p>Inactive State</p>
+              <button>Button</button>
+              <p>Active State</p>
+              <button>Button</button>
+            </div>
+            <div class="col border-right">
+              <div class="little-img"></div>
+            </div>
+            <div class="col border-right">
+              <div class="colors">
+                <div class="row">
+                  <div class="col one"></div>
+                  <div class="col two"></div>
+                  <div class="col three"></div>
+                  <div class="col four"></div>
+                  <div class="col five"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="challenge">
-        <h2>Challenge</h2>
-        <div class="row">
-          <div class="col-7 img">
-            <img class="border" src="../assets/challenge.png">
-          </div>
-          <div class="col">
-            <p>A challenge I encountered while working on the contact form, was the limit of 5,000 submissions allowed by the website's hosting platform. To overcome this challenge and offer a more long-term and scalable solution, I intercepted the form submissions and validated the form data before creating an HTTP request via AJAX and returning a status message. The form data was then sent to the company’s customer service platform as a pending ticket, where the customer service team could easily respond to inquiries.</p>
+        <div class="challenge">
+          <h2>Challenge</h2>
+          <div class="row">
+            <div class="col-7 img">
+              <img class="border" src="../assets/challenge.png">
+            </div>
+            <div class="col">
+              <p>A challenge I encountered while working on the contact form, was the limit of 5,000 submissions allowed by the website's hosting platform. To overcome this challenge and offer a more long-term and scalable solution, I intercepted the form submissions and validated the form data before creating an HTTP request via AJAX and returning a status message. The form data was then sent to the company’s customer service platform as a pending ticket, where the customer service team could easily respond to inquiries.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="results">
-        <h2>Results</h2>
-        <div class="row">
-          <div class="col">
-            <div class="top">
-              <img src="../assets/improve.png">
-              <div>
-                <p class="adj">improved</p>
-                <h4>Brand Alignment</h4>
+        <div class="results">
+          <h2>Results</h2>
+          <div class="row">
+            <div class="col">
+              <div class="top">
+                <img src="../assets/improve.png">
+                <div>
+                  <p class="adj">improved</p>
+                  <h4>Brand Alignment</h4>
+                </div>
               </div>
+              <hr>
+              <ul>
+                <li>Consulted the marketing and product design teams for feedback and outcome</li>
+              </ul>
             </div>
-            <hr>
-            <ul>
-              <li>Consulted the marketing and product design teams for feedback and outcome</li>
-            </ul>
+            <div class="col">
+              <div class="top">
+                <img src="../assets/build.png">
+                <div>
+                  <p class="adj">built</p>
+                  <h4>Scaling Solution</h4>
+                </div>
+              </div>
+              <hr>
+              <ul>
+                <li>Updates were easily made when Flashfood's partnered with over 100 additional grocery stores shortly after the website launch</li>
+              </ul>
+            </div>          
           </div>
-          <div class="col">
-            <div class="top">
-              <img src="../assets/build.png">
-              <div>
-                <p class="adj">built</p>
-                <h4>Scaling Solution</h4>
+          <div class="row">
+            <div class="col">
+              <div class="top">
+                <img src="../assets/increase.png">
+                <div>
+                  <p class="adj">increased</p>
+                  <h4>Site Conversion Rate</h4>
+                </div>
               </div>
+              <hr>
+              <ul>
+                <li>Email and newsletter subscription rates increased by around 35% after the updated website's launch</li>
+              </ul>
             </div>
-            <hr>
-            <ul>
-              <li>Updates were easily made when Flashfood's partnered with over 100 additional grocery stores shortly after the website launch</li>
-            </ul>
-          </div>          
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="top">
-              <img src="../assets/increase.png">
-              <div>
-                <p class="adj">increased</p>
-                <h4>Site Conversion Rate</h4>
+            <div class="col">
+              <div class="top">
+                <img src="../assets/increase2.png">
+                <div>
+                  <p class="adj">increased</p>
+                  <h4>Brand Awareness</h4>
+                </div>
               </div>
-            </div>
-            <hr>
-            <ul>
-              <li>Email and newsletter subscription rates increased by around 35% after the updated website's launch</li>
-            </ul>
+              <hr>
+              <ul>
+                <li>All key information has been presented in blurbs of less than three sentences</li>
+              </ul>
+            </div>          
           </div>
-          <div class="col">
-            <div class="top">
-              <img src="../assets/increase2.png">
-              <div>
-                <p class="adj">increased</p>
-                <h4>Brand Awareness</h4>
-              </div>
-            </div>
-            <hr>
-            <ul>
-              <li>All key information has been presented in blurbs of less than three sentences</li>
-            </ul>
-          </div>          
         </div>
-      </div>
       </template>
     </project>
   </div>
@@ -219,15 +273,8 @@ export default {
 <style scoped>
 .adj {
   margin-bottom: 0;
-}
-
-.adj {
   margin-top: 0.7em;
   color: rgba(233, 110, 130, 1)
-}
-
-hr {
-  margin-top: 0.5em;
 }
 
 .comp, .design, .results, .planning {
@@ -320,5 +367,10 @@ button {
   max-width: 50px;
   max-height: 50px;
   margin-right: 20px;
+}
+
+.slide {
+  width: 100%; 
+  height: 400px;
 }
 </style>
