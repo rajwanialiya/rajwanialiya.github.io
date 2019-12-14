@@ -5,7 +5,10 @@
     <project>
       <template slot="img"><img src='../assets/project1-header.svg'></template>
       <template slot="title">Flashfood Main Website</template>
-      <template slot="category">Web Development & UI/UX</template>
+      <template slot="category">
+        Web Development & UI/UX
+        <br><a href="https://www.flashfood.com/" target="_blank" class="live">View Live &#8594;</a>
+      </template>
       <template slot="description">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and company's CTO to design and implement a scalable updated main website that reflected these changes.</template>
       <template slot="logo"><img src="../assets/flashfood.png"></template>
       <template slot="role">
@@ -67,24 +70,33 @@
         <div class="planning">
           <h2>Planning</h2>
           <div class="row">
-            <div class="col"><b-button v-b-modal.modal-1><img class="wireframe" src='../assets/wireframe1.png'></b-button></div>
-            <div class="col">
-              <div class="row"><b-button v-b-modal.modal-2><img class="wireframe" src='../assets/wireframe2.png'></b-button></div>
-              <div class="row"><b-button v-b-modal.modal-3><img class="wireframe" src='../assets/wireframe4.png'></b-button></div>
-            </div>
-            <div class="col"><b-button v-b-modal.modal-4><img class="wireframe" src='../assets/wireframe3.png'></b-button></div>
+            <div class="col border"><b-button v-b-modal.modal-1 class="light-box">
+              <img class="wireframe" src='../assets/wireframe1.png'>
+              <div class="go-corner">
+                <h4 class="go-arrow">→</h4>
+              </div>
+            </b-button></div>
+            <div class="col border"><b-button v-b-modal.modal-2 class="light-box">
+              <img class="wireframe" src='../assets/wireframe2.png'>
+              <div class="go-corner">
+                <h4 class="go-arrow">→</h4>
+              </div>
+            </b-button></div>
+            <div class="col border"><b-button v-b-modal.modal-3 class="light-box">
+              <img class="wireframe" src='../assets/wireframe3.png'>
+              <div class="go-corner">
+                <h4 class="go-arrow">→</h4>
+              </div>
+            </b-button></div>
           </div>
-          <b-modal id="modal-1" title="BootstrapVue">
+          <b-modal id="modal-1" size="lg" hide-footer="true" hide-header="true">
             <img class="wireframe" src='../assets/wireframe1.png'>
           </b-modal>
-          <b-modal id="modal-2" title="BootstrapVue">
+          <b-modal id="modal-2" size="lg" hide-footer="true" hide-header="true">
             <img class="wireframe" src='../assets/wireframe2.png'>
           </b-modal>
-          <b-modal id="modal-3" title="BootstrapVue">
+          <b-modal id="modal-3" size="lg" hide-footer="true" hide-header="true">
             <img class="wireframe" src='../assets/wireframe3.png'>
-          </b-modal>
-          <b-modal id="modal-4" title="BootstrapVue">
-            <img class="wireframe" src='../assets/wireframe4.png'>
           </b-modal>
         </div>
         <div class="design">
@@ -238,28 +250,77 @@ export default {
 </script>
 
 <style scoped>
-.adj {
+.adj, .live {
   margin-bottom: 0;
   margin-top: 0.7em;
-  color: rgba(233, 110, 130, 1)
+  color: rgba(233, 110, 130, 1);
 }
 
+.live:hover {
+  font-size: 17px;
+}
 .comp, .design, .results, .planning {
   margin-top: 40px;
   width: 100%;
 }
 
-.challenge {
-  margin-top: 80px;
-  width: 100%;
+.design h2, .planning h2, .challenge h2 {
+  margin-bottom: 0.8em;
+}
+
+.planning .col {
+  padding: 0;
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.go-arrow {
+  margin-top: 5px;
+  margin-right: 15px;
+  color: white;
+  font-family: courier, sans;
+  z-index: 10;
 }
 
 .wireframe {
   width: 100%;
-  padding: 10px 0;
-  -webkit-box-shadow: 10px 10px 15px -14px rgba(199,199,199,1);
-  -moz-box-shadow: 10px 10px 15px -14px rgba(199,199,199,1);
-  box-shadow: 10px 10px 15px -14px rgba(199,199,199,1);
+}
+
+.light-box {
+  margin-bottom: 0;
+}
+
+.light-box:before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -16px;
+  right: -16px;
+  background: rgba(233, 110, 130, 0.9);
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.15s ease-out;
+}
+
+.light-box:hover:before {
+  transform: scale(4.5);
+}
+
+.challenge {
+  margin-top: 80px;
+  width: 100%;
 }
 
 .des {
@@ -344,9 +405,12 @@ button {
   margin-right: 20px;
 }
 
-button, button:hover {
+.light-box, .light-box:hover, .light-box.active.focus, .light-box.active:focus,
+.light-box.focus, .light-box:active.focus, 
+.light-box:active:focus, .light-box:focus{
   background-color: transparent;
   padding: 0;
   border: none;
 }
+
 </style>

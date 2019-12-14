@@ -9,7 +9,7 @@
         </div>
         <p><slot name="description"></slot></p>
       </div>
-      <div class="border-bottom logo"><slot name="logo"></slot></div>
+      <div class="logo"><slot name="logo"></slot></div>
       <div class="overview">
         <div class="row">
           <div class="col">
@@ -129,18 +129,10 @@ hr {
   margin-left: 20px;
 }
 
-.logo {
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
 .logo > * {
-  position: relative;
-  top: 20px;
   max-height: 100%;
   max-width: 550px;
+  margin: 50px 0 20px;
 }
 
 .overview {
