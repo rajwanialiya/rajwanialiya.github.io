@@ -9,7 +9,7 @@
         </div>
         <p><slot name="description"></slot></p>
       </div>
-      <div class="border-bottom logo"><slot name="logo"></slot></div>
+      <div class="logo"><slot name="logo"></slot></div>
       <div class="overview">
         <div class="row">
           <div class="col">
@@ -40,6 +40,7 @@
       </div>
       <slot class="other" name="other"></slot>
     </div>
+    <div class="direct"></div>
   </div>
     <!-- <div id="display">
       <li class="layer">
@@ -92,6 +93,10 @@ p, .gray, li, span {
   color: #6D6D6D;
 }
 
+hr {
+  margin-top: 0.5em;
+}
+
 .page-wrap {
   max-width: 100%;
   display: flex;
@@ -100,7 +105,7 @@ p, .gray, li, span {
 }
 
 .page-content { 
-  width: 90vw;
+  width: 85vw;
   display: flex; 
   flex-direction: column;
   align-items: center;
@@ -125,18 +130,10 @@ p, .gray, li, span {
   margin-left: 20px;
 }
 
-.logo {
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
 .logo > * {
-  position: relative;
-  top: 20px;
   max-height: 100%;
   max-width: 550px;
+  margin: 50px 0 20px;
 }
 
 .overview {
@@ -153,6 +150,11 @@ p, .gray, li, span {
   font-size: 22px; 
   line-height: 44px; 
   height: auto;
+  width: 100%;
+}
+
+.direct {
+  height: 500px;
   width: 100%;
 }
 </style>

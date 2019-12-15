@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .left {
   text-align: left;
   padding-left: 0;
@@ -48,8 +48,16 @@ export default {
     width: 100%; 
 }
 
-.visit img:hover {
+.visit img:hover, .code img:hover {
     opacity: 0.5;
+}
+
+.code img{
+  width: 40px;
+  height: 40px;
+  margin-left: -5px;
+  margin-right: -10px;
+  margin-top: -4px;
 }
 
 .nextMobile{

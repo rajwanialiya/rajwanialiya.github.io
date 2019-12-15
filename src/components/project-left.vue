@@ -35,7 +35,6 @@ export default {
 }
 
 .blurb { 
-  background-color: rgba(243, 247, 253, 0.9);  
   padding: 20px 30px; 
   width: 350px;
 }

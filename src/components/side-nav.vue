@@ -3,8 +3,8 @@
     <div class="top">
       <b-navbar-brand class="nav-item invert"><router-link to="/">Aliya Rajwani</router-link></b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="nav-item invert" href="#">Home</b-nav-item>
-        <b-nav-item class="nav-item invert" href="#work">Work</b-nav-item>
+        <b-nav-item class="nav-item invert"><router-link to="/">Home</router-link></b-nav-item>
+        <b-nav-item class="nav-item invert" href="#work"><router-link to="/">Work</router-link></b-nav-item>
         <b-nav-item class="nav-item invert" href="https://drive.google.com/file/d/1hV2jvH8frgEkRwzt3V2eXakpKQDCh5tD/view?usp=sharing" target="_blank">Resume</b-nav-item>
         <b-nav-item class="talk nav-item invert" href="mailto:rajwani.aliya@gmail.com">
           <div></div>
