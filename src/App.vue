@@ -21,15 +21,23 @@ export default {
       let circle = document.querySelector('.circle');
       let posY = ev.clientY;
       let posX = ev.clientX;
+      // var elements = document.getElementsByTagName('a')
 
-      console.log(document.querySelectorAll(':hover'))
+      
+      // for (var el in elements) {
+      //   if (ev.target.children.contains(el)) {
+      //     document.querySelector('.circle').style.width = '25px'
+      //     document.querySelector('.circle').style.height = '25px'
+      //   }
+      // }
 
+      // if (ev.target.classList.includes('hover'))
       if (ev.target.tagName === 'A' || ev.target.tagName === 'IMG') {
-        circle.style.width = '25px'
-        circle.style.height = '25px'
+        document.querySelector('.circle').style.width = '25px'
+        document.querySelector('.circle').style.height = '25px'
       } else {
-        circle.style.width = ''
-        circle.style.height = ''
+        document.querySelector('.circle').style.width = ''
+        document.querySelector('.circle').style.height = ''
       }
 
       circle.style.top = posY + 'px';
@@ -99,7 +107,13 @@ router-link, a, a:hover {
   box-shadow: 0 0 0 2px black;
 }
 
+/* .hover {
+  width: 25px;
+  height: 25px;
+} */ 
+
 /* a:hover {
   cursor: none;
 } */ 
+
 </style>
