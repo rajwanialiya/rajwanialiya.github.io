@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <div class="circle"></div>
+    <div class="circle">
+      <h5 class="next-text">Next</h5>
+      <h5 class="prev-text">Prev</h5>
+    </div>
   </div>
 </template>
 
@@ -18,9 +21,16 @@ export default {
   }, 
   methods: {
     cursorMove: function (ev) {
-      let circle = document.querySelector('.circle');
+      var circle = document.querySelector('.circle');
+      var next = document.querySelector('.next-text');
+      var prev = document.querySelector('.prev-text');
       let posY = ev.clientY;
       let posX = ev.clientX;
+
+      circle.style.top = posY + 'px';
+      circle.style.left = posX + 'px';
+      prev.style.display = 'none'
+      next.style.display = 'none'
       // var elements = document.getElementsByTagName('a')
 
       
@@ -40,8 +50,17 @@ export default {
         document.querySelector('.circle').style.height = ''
       }
 
-      circle.style.top = posY + 'px';
-      circle.style.left = posX + 'px';
+      if (ev.target.classList.value === 'next' || ev.target.classList.value === 'prev')  {
+        circle.style.width = '80px'
+        circle.style.height = '80px'
+        if (ev.target.classList.value === 'prev') {
+          prev.style.display = 'block'
+          next.style.display = 'none'
+        } else if (ev.target.classList.value === 'next') {
+          prev.style.display = 'none'
+          next.style.display = 'block'
+        }
+      }
     }
   }
 }
@@ -105,8 +124,17 @@ router-link, a, a:hover {
   background-color: transparent;
   aborder: 2px solid black;
   box-shadow: 0 0 0 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.next-text, .prev-text {
+  display: none;
+  cursor: none;
+  margin: 0;
+  color: black;
+}
 /* .hover {
   width: 25px;
   height: 25px;

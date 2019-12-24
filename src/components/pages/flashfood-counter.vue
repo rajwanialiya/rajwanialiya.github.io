@@ -106,13 +106,18 @@
         </div>
         <div class="next">
           <h2>Next Steps</h2>
-          <h1>ADD VID</h1>
           <p>Overall, the counter met the objectives it was meant to achieve. After demonstrating the feature to the Flashfood team and implementing their suggestions, I was able to display a counter with the optimal count-up and delay speeds. The following are steps that can be taken to further improve this feature in the future:</p>
           <ul>
             <li>The report's loading time can sometimes take longer than expected. If this time were reduced, the feature would be more effective.</li>
             <li>The counter currently displays the amount of food waste diverted from landfills. However, on the Flashfood app, there is an "Impact" section that displays this statistic along with the amount of CO₂ diverted and money saved. To maintain consistency, it may be beneficial to display these statistics in a similar counter on the main website as well.</li>
           </ul>
         </div>
+      </template>
+      <template slot="prev">
+        <router-link to='/flashfood-site'><div class="prev"></div></router-link>
+      </template>
+      <template slot="next">
+        <router-link to='/'><div class="next"></div></router-link>
       </template>
     </project>
   </div>
@@ -200,4 +205,8 @@ pre {
   justify-content: center;
 }
 
+.prev, .next {
+  width: 100%;
+  height: 100%;
+}
 </style>

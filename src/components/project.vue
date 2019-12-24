@@ -42,10 +42,10 @@
     </div>
     <div class="bottom-nav">
       <div class="prev">
-        <slot name="prev"></slot>
+        <slot name="prev"><router-link to='/'></router-link></slot>
       </div>
       <div class="next">
-        <slot name="next"></slot>
+        <slot name="next"><router-link to='/'></router-link></slot>
       </div>
     </div>
   </div>
@@ -161,24 +161,17 @@ hr {
 }
 
 .bottom-nav {
-  height: 300px;
+  height: 200px;
   width: 100%;
   display: flex;
 }
 
 .prev{
-  background-color: red;
   height: 100%;
   width: 100%;
 }
 
-.prev:hover {
-  cursor: pointer;
-  background-color: grey;
-}
-
 .next{
-  background-color: blue;
   height: 100%;
   width: 100%;
 }

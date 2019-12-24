@@ -129,7 +129,7 @@
               </div>
             </b-button></div>
           </div>
-          <b-modal id="modal-1" size="lg" hide-footer=true hide-header=true>
+          <b-modal id="modal-1" size="lg" hide-footer="true" hide-header="true">
             <img class="wireframe" src='../assets/wireframe1.png'>
           </b-modal>
           <b-modal id="modal-2" size="lg" hide-footer=true hide-header=true>
@@ -238,6 +238,12 @@
             </div>          
           </div>
         </div>
+      </template>
+      <template slot="prev">
+        <router-link to='/'><div class="prev"></div></router-link>
+      </template>
+      <template slot="next">
+        <router-link to='/flashfood-counter'><div class="next"></div></router-link>
       </template>
     </project>
   </div>
@@ -465,5 +471,10 @@ button {
 
 .comp .row {
   padding: 30px 0;
+}
+
+.prev, .next {
+  width: 100%;
+  height: 100%;
 }
  </style>
