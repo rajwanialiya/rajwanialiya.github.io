@@ -42,13 +42,14 @@ export default {
       // }
 
       // if (ev.target.classList.includes('hover'))
-      if (ev.target.tagName === 'A' || ev.target.tagName === 'IMG') {
-        document.querySelector('.circle').style.width = '25px'
-        document.querySelector('.circle').style.height = '25px'
-      } else {
-        document.querySelector('.circle').style.width = ''
-        document.querySelector('.circle').style.height = ''
-      }
+      
+      // if (ev.target.tagName === 'A' || ev.target.tagName === 'IMG') {
+      //   document.querySelector('.circle').style.width = '25px'
+      //   document.querySelector('.circle').style.height = '25px'
+      // } else {
+      //   document.querySelector('.circle').style.width = ''
+      //   document.querySelector('.circle').style.height = ''
+      // }
 
       if (ev.target.classList.value === 'next' || ev.target.classList.value === 'prev')  {
         circle.style.width = '80px'

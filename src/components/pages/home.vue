@@ -16,7 +16,7 @@
               <div>
                 <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
-              <p class="blurb">Exstrahlen is a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app achieves this through a convolutional neural network to identify and analyze abnormalities in chest scans.</p>
+              <p class="blurb project-1">Exstrahlen is a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app achieves this through a convolutional neural network to identify and analyze abnormalities in chest scans.</p>
             </div>
             <ul class="skills second">
               <li>Machine Learning</li>
@@ -182,13 +182,13 @@ export default {
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#fff9e5"
+        context.fillStyle = "#B5FFEB"
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#f1e5ff"
+        context.fillStyle = "#e5c8ff"
       } else if (document.body.classList.contains('fp-viewing-3')) {
-        context.fillStyle = "#ffe5f0"
+        context.fillStyle = "#FFAFD1"
       } else if (document.body.classList.contains('fp-viewing-4')) {
-        context.fillStyle = "#e5fff8"
+        context.fillStyle = "#FFFBA9"
       }
       
       this.mouseX = event.clientX
