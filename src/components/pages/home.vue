@@ -5,7 +5,7 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
-      <project-right class="section">
+      <project-right class="section fp-auto-height">
         <template id="work" slot="description">
           <div class="writing">
             <div class="intro">
@@ -30,7 +30,7 @@
           </div>
         </template>
       </project-right>
-      <project-left class="section">
+      <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
             <router-link to="flashfood-site"><img src="../assets/flashfood-site-mockup.svg"></router-link>
@@ -41,9 +41,7 @@
               <h2>Flashfood.com</h2>
             </div>
             <div class="main">
-              <div class="blurbContainer">
-                <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
-              </div>
+              <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
               <div>
                 <router-link to="flashfood-site" class="visit"><img src="../assets/casestudy.svg"></router-link>
                 <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
@@ -59,7 +57,7 @@
             </div>
         </template>
       </project-left>
-      <project-right class="section">
+      <project-right class="section fp-auto-height">
         <template slot="description">
           <div class="writing">
             <div class="intro">
@@ -86,7 +84,7 @@
           </div>
         </template>
       </project-right>
-      <project-left class="section">
+      <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
             <a href="https://github.com/rajwanialiya/hackxplore"><img src="../assets/nailed-it-mockup.svg"></a>
@@ -97,7 +95,7 @@
               <h2>Nailed It</h2>
             </div>
             <div class="main">
-              <p class="blurb">“Nailed It” is a collaboratively developed app that won second place at the TechXplore Healthcare & AI hackathon. The app uses open-source machine learning libraries and Python to perform early-stage diagnosis of anemia, oxygen deprivation illnesses, and various infections by analyzing the colour discrepancy between users' skin and nails.</p>
+              <p class="blurb">“Nailed It” is a collaboratively developed app that uses open-source machine learning libraries and Python to perform early-stage diagnosis of anemia, oxygen deprivation illnesses, and various infections by analyzing the colour discrepancy between users' skin and nails.</p>
               <div>
                 <a href="https://github.com/rajwanialiya/hackxplore" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
@@ -131,7 +129,9 @@ export default {
         licenseKey: 'aNCq80A^r0',
         menu: '#menu',
         scrollingSpeed: 1100,
-        onLeave: this.clear
+        onLeave: this.clear,
+        responsiveWidth: 480,
+        afterResponsive: function(isResponsive){}
       },
       mouseX: 0, 
       mouseY: 0, 
@@ -247,7 +247,7 @@ export default {
 }
 
 .portfolio {
-  margin: 24px;
+  margin: 0 24px;
 }
 
 @media screen and (max-width: 950px) {
@@ -271,9 +271,7 @@ export default {
 
   .blurb {
     width: 100% !important;
-    padding: 0 !important;
-    background-color: transparent !important;
-    border: transparent !important;
+    background-color: rgb(250, 250, 250);
   }
 
   .intro p {

@@ -15,10 +15,10 @@ export default {
   name: 'app',
   data() {
     return {}
-  }, 
+  },
   mounted: function () {
     document.addEventListener('mousemove', (ev) => this.cursorMove(ev))
-  }, 
+  },
   methods: {
     cursorMove: function (ev) {
       var circle = document.querySelector('.circle');
@@ -144,4 +144,19 @@ router-link, a, a:hover {
   cursor: none;
 } */ 
 
+/* SMALL */ 
+@media screen and (max-width: 576px)  { 
+  #app {
+    overflow: hidden;
+  }
+
+  .view-content {
+    min-height: 80vh;
+    margin: 30px 0;
+  }
+
+  .section, .fp-tableCell, .fp-section, .fp-table {
+    height: auto !important;
+  }
+}
 </style>

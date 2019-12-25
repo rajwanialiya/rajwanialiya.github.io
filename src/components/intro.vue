@@ -233,6 +233,18 @@ li {
   margin-top: 15%; 
 }
 
+@media screen and (max-width: 576px) {
+  #fifthCircle {
+    display: none !important;
+  }
+
+  #moon {
+    width: 130%;
+    top: 25vh;
+    left: 0;
+  }
+}
+
 @media screen and (max-width: 950px) {
   #firstCircle, #secondCircle{
     display: none !important;
@@ -254,12 +266,6 @@ li {
   #typed, .typed_cursor {
     line-height: 30px;
     max-width: 200px;
-  }
-
-  #moon {
-    width: 100%;
-    left: 10% !important;
-    top: 200px !important;
   }
 }
 </style>
