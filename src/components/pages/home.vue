@@ -91,7 +91,7 @@
           </div>
           <div class="writing">
             <div class="intro">
-              <p>App Development & UI/UX</p>
+              <p>App Development & UI/UX</p> 
               <h2>Nailed It</h2>
             </div>
             <div class="main">
