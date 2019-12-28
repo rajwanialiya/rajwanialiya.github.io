@@ -42,7 +42,7 @@ export default {
       // }
 
       // if (ev.target.classList.includes('hover'))
-      
+
       // if (ev.target.tagName === 'A' || ev.target.tagName === 'IMG') {
       //   document.querySelector('.circle').style.width = '25px'
       //   document.querySelector('.circle').style.height = '25px'
@@ -155,7 +155,9 @@ router-link, a, a:hover {
     min-height: 80vh;
     margin: 30px 0;
   }
+}
 
+@media screen and (max-width: 950px) {
   .section, .fp-tableCell, .fp-section, .fp-table {
     height: auto !important;
   }

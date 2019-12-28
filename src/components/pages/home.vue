@@ -130,7 +130,7 @@ export default {
         menu: '#menu',
         scrollingSpeed: 1100,
         onLeave: this.clear,
-        responsiveWidth: 480,
+        responsiveWidth: 950,
         afterResponsive: function(isResponsive){}
       },
       mouseX: 0, 

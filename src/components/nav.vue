@@ -8,7 +8,7 @@
         <b-nav-item @click="scrollTo(0)">About</b-nav-item>
         <b-nav-item @click="scrollTo(200)">Work</b-nav-item>
         <b-nav-item href="https://drive.google.com/file/d/1hV2jvH8frgEkRwzt3V2eXakpKQDCh5tD/view?usp=sharing" target="_blank">Resume</b-nav-item>
-        <b-nav-item-dropdown right text="Get In Touch ">
+        <b-nav-item-dropdown right text="Get In Touch" class="dropdown">
           <b-dropdown-item href="mailto:rajwani.aliya@gmail.com">Email</b-dropdown-item>
           <div class="dropdown-divider"></div>
           <b-dropdown-item target="_blank" href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/">LinkedIn</b-dropdown-item>
@@ -69,21 +69,16 @@ export default {
   z-index: 100; 
 }
 
+.navbar:has(.show) {
+  background-color: white !important;
+}
+
 .navbar-brand {
   font-size: 1.4rem;
 }
 
 button.navbar-toggler {
   border-color: transparent; 
-}
-
-.dropdown-menu-right {
-  background-color: transparent; 
-}
-
-ul.dropdown-menu {
-  background-color: rgba(255,255,255, 0.2); 
-  border: 0px !important; 
 }
 
 .dropdown-divider {
