@@ -51,16 +51,19 @@ export default {
       //   document.querySelector('.circle').style.height = ''
       // }
 
-      if (ev.target.classList.value === 'next' || ev.target.classList.value === 'prev')  {
+      if (ev.target.classList.value === 'next-proj' || ev.target.classList.value === 'prev-proj')  {
         circle.style.width = '80px'
         circle.style.height = '80px'
-        if (ev.target.classList.value === 'prev') {
+        if (ev.target.classList.value === 'prev-proj') {
           prev.style.display = 'block'
           next.style.display = 'none'
-        } else if (ev.target.classList.value === 'next') {
+        } else if (ev.target.classList.value === 'next-proj') {
           prev.style.display = 'none'
           next.style.display = 'block'
         }
+      } else {
+        circle.style.width = ''
+        circle.style.height = ''
       }
     }
   }

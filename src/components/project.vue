@@ -41,11 +41,11 @@
       <slot class="other" name="other"></slot>
     </div>
     <div class="bottom-nav">
-      <div class="prev">
-        <slot name="prev"><router-link to='/'></router-link></slot>
+      <div class="prev-proj">
+        <slot name="prev-proj"><router-link to='/'></router-link></slot>
       </div>
-      <div class="next">
-        <slot name="next"><router-link to='/'></router-link></slot>
+      <div class="next-proj">
+        <slot name="next-proj"><router-link to='/'></router-link></slot>
       </div>
     </div>
   </div>
@@ -166,12 +166,12 @@ hr {
   display: flex;
 }
 
-.prev{
+.prev-proj{
   height: 100%;
   width: 100%;
 }
 
-.next{
+.next-proj{
   height: 100%;
   width: 100%;
 }

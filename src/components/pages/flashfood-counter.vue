@@ -113,11 +113,11 @@
           </ul>
         </div>
       </template>
-      <template slot="prev">
-        <router-link to='/flashfood-site'><div class="prev"></div></router-link>
+      <template slot="prev-proj">
+        <router-link to='/flashfood-site'><div class="prev-proj"></div></router-link>
       </template>
-      <template slot="next">
-        <router-link to='/'><div class="next"></div></router-link>
+      <template slot="next-proj">
+        <router-link to='/'><div class="next-proj"></div></router-link>
       </template>
     </project>
   </div>
@@ -205,7 +205,7 @@ pre {
   justify-content: center;
 }
 
-.prev, .next {
+.prev-proj, .next-proj {
   width: 100%;
   height: 100%;
 }

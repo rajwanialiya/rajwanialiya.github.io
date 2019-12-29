@@ -239,11 +239,11 @@
           </div>
         </div>
       </template>
-      <template slot="prev">
-        <router-link to='/'><div class="prev"></div></router-link>
+      <template slot="prev-proj">
+        <router-link to='/'><div class="prev-proj"></div></router-link>
       </template>
-      <template slot="next">
-        <router-link to='/flashfood-counter'><div class="next"></div></router-link>
+      <template slot="next-proj">
+        <router-link to='/flashfood-counter'><div class="next-proj"></div></router-link>
       </template>
     </project>
   </div>
@@ -473,7 +473,7 @@ button {
   padding: 30px 0;
 }
 
-.prev, .next {
+.prev-proj, .next-proj {
   width: 100%;
   height: 100%;
 }
