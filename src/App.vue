@@ -61,7 +61,7 @@ export default {
           prev.style.display = 'none'
           next.style.display = 'block'
         }
-      } else {
+      } else { 
         circle.style.width = ''
         circle.style.height = ''
       }
