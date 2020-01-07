@@ -41,6 +41,7 @@
       <slot class="other" name="other"></slot>
     </div>
     <div class="bottom-nav">
+      <h3 class="bgd-text">more</h3>
       <div class="prev-proj">
         <slot name="prev-proj"><router-link to='/'></router-link></slot>
       </div>
@@ -164,6 +165,7 @@ hr {
   height: 200px;
   width: 100%;
   display: flex;
+  position: relative;
 }
 
 .prev-proj{
@@ -176,4 +178,10 @@ hr {
   width: 100%;
 }
 
+.bgd-text {
+  opacity: 0.2;
+  position: absolute; 
+  top: 40%;
+  left: 50%;
+}
 </style>

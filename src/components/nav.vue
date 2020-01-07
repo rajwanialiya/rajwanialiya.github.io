@@ -5,9 +5,8 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item @click="scrollTo(0)">About</b-nav-item>
         <b-nav-item @click="scrollTo(200)">Work</b-nav-item>
-        <b-nav-item href="https://drive.google.com/file/d/1hV2jvH8frgEkRwzt3V2eXakpKQDCh5tD/view?usp=sharing" target="_blank">Resume</b-nav-item>
+        <b-nav-item href="https://drive.google.com/file/d/1oyLPo-tcwElkmR5xwdHWPjig_Gju59ka/view?usp=sharing" target="_blank">Resume</b-nav-item>
         <b-nav-item-dropdown right text="Get In Touch" class="dropdown">
           <b-dropdown-item href="mailto:rajwani.aliya@gmail.com">Email</b-dropdown-item>
           <div class="dropdown-divider"></div>

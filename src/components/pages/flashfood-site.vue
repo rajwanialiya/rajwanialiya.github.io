@@ -7,7 +7,7 @@
       <template slot="title">Flashfood Main Website</template>
       <template slot="category">
         Web Development & UI/UX
-        <br><strong><a href="https://www.flashfood.com/" target="_blank" class="live">View Live &#8594;</a></strong>
+        <br><strong><a href="https://www.flashfood.com/" target="_blank" class="live">View Live <span class="arrow">&#8594;</span></a></strong>
       </template>
       <template slot="description">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and company's CTO to design and implement a scalable updated main website that reflected these changes.</template>
       <template slot="logo"><img src="../assets/flashfood.png"></template>
@@ -148,9 +148,9 @@
             </div>
             <div class="col border-right">
               <p>Inactive State</p>
-              <button>Button</button>
+              <button class="inactive btn">Button</button>
               <p>Active State</p>
-              <button>Button</button>
+              <button class="active btn">Button</button>
             </div>
             <div class="col border-right">
               <div class="little-img"></div>
@@ -304,8 +304,12 @@ export default {
   color: rgba(233, 110, 130, 1);
 }
 
-.live:hover {
-  font-size: 17px;
+.arrow {
+  color: black;
+}
+
+.live:hover .arrow{
+  margin-left: 5px;
 }
 .comp, .design, .results, .planning {
   margin-top: 40px;
@@ -476,5 +480,19 @@ button {
 .prev-proj, .next-proj {
   width: 100%;
   height: 100%;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  color: white;
+}
+
+.inactive {
+  background-color: #333;
+}
+
+.active {
+  background-color: rgb(66, 144, 66);
 }
  </style>
