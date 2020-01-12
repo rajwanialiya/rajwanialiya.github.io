@@ -311,6 +311,7 @@ export default {
 .live:hover .arrow{
   margin-left: 5px;
 }
+
 .comp, .design, .results, .planning {
   margin-top: 40px;
   width: 100%;

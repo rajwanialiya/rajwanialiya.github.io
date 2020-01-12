@@ -5,6 +5,32 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
+      <project-left class="section fp-auto-height">
+        <template slot="description">
+          <div class="image">
+            <router-link to="tb-email-preferences"><img src="../assets/tunnelbear-mockup.svg"></router-link>
+          </div>
+          <div class="writing">
+            <div class="intro">
+              <p>Web Development & API</p>
+              <h2>Email Preferences Centre</h2>
+            </div>
+            <div class="main">
+              <p class="blurb">This email preferences centre offers an intuitive and simple method for TunnelBear users to opt in and out of emails. The solution uses logic implemented on the front-end and interaction with the back-end to personalize the methods provided by Mailgun's API to fit the feature's needs.</p>
+              <div>
+                <router-link to="tb-email-preferences" class="visit"><img src="../assets/casestudy.svg"></router-link>
+                <a href= "https://www.tunnelbear.com/email-preferences" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
+              </div>
+              </div>
+              <ul class="skills">
+                <li>Vue</li>
+                <li>UX</li>
+                <li>API Interaction</li>
+                <li>UI</li>
+              </ul>
+            </div>
+        </template>
+      </project-left>
       <project-right class="section fp-auto-height">
         <template id="work" slot="description">
           <div class="writing">
@@ -182,13 +208,15 @@ export default {
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#B5FFEB"
+        context.fillStyle = "#AED9CB"
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#e5c8ff"
+        context.fillStyle = "#d6e2f5"
       } else if (document.body.classList.contains('fp-viewing-3')) {
-        context.fillStyle = "#FFAFD1"
+        context.fillStyle = "#e5c8ff"
       } else if (document.body.classList.contains('fp-viewing-4')) {
-        context.fillStyle = "#FFFBA9"
+        context.fillStyle = "#FFAFD1"
+      } else if (document.body.classList.contains('fp-viewing-5')) {
+        context.fillStyle = "#f7cf8b"
       }
       
       this.mouseX = event.clientX

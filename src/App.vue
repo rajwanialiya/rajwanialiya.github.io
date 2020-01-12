@@ -163,6 +163,7 @@ router-link, a, a:hover {
 @media screen and (max-width: 950px) {
   .section, .fp-tableCell, .fp-section, .fp-table {
     height: auto !important;
+    margin: 30px 0;
   }
 }
 </style>

@@ -254,11 +254,11 @@ li {
 
   [data-depth="0.1"] {
     left: 33% !important;
-    top: 40% !important;
+    top: 50% !important;
   }
   
-  #typed, .typed_cursor {
-    line-height: 30px;
+  #typed, .typed_cursor, .typed-cursor--blink {
+    line-height: 30px !important;
     max-width: 200px;
   }
 
