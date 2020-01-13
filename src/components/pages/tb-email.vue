@@ -77,7 +77,36 @@
         </div>
         <div class="iterations">
           <h2>Iterations</h2>
-          <p>The design and implementation process involved developing my ideas, consulting the design team and web team leads for feedback, and returning to the development stage. This resulted in many itertaions of the preferences centre, of which the most notable ones are included below.</p>
+          <p>The design and implementation process involved developing my ideas, consulting the design team and web team leads for feedback, and returning to the development stage. This resulted in many itertaions of the preferences centre, of which the most notable one is included below.</p>
+           <img class="iteration-img" src="../assets/iteration.png">
+           <p>TunnelBear's committment to being user-friendly and transparent dictated the necessity for an intuitive and confusion-free user experience. The following iteration is where I encountered a challenge. The toggle switches beside the email subcategories allow users to opt in, however by checking the 'Unsubscribed all' option, the user is opting out of all emails. The discrepency in the meaning of ON, could introduce confusion. Furthermore, toggling the 'Unsubscribe all' button ON,turns the other subcategory option OFF. Toggling it OFF, resubscibes user's to all emails. This means the button text is misleading.</p>
+        </div>
+        <div class="challenges">
+          <h2>Code Challenges</h2>
+          <div class="step">
+            <div class="top">
+              <div class="num"><h5>1</h5></div>
+              <div>
+                <p class="adj">vue lifecycle</p>
+                <h4>Variable Updates</h4>
+              </div>
+            </div>
+            <hr>
+            <p><strong>Challenge: </strong>The Vue v-model method is updated after any function calls on the element, however I needed the updated variable to be used in the function call; I wanted the v-model method to be executed before the function call.<br>
+            <strong>Solution: </strong>To resolve this I used the nextTick method on the function to ensure that it was called after the DOM had been updated (and the v-model method had been executed).</p>
+          </div>
+          <div class="step">
+            <div class="top">
+              <div class="num"><h5>1</h5></div>
+              <div>
+                <p class="adj">mailgun API</p>
+                <h4>Opting into subcategories</h4>
+              </div>
+            </div>
+            <hr>
+            <p><strong>Challenge: </strong>If a user is subscribed to all emails, in Mailgun their preferences include a '*' tag. If this user updates would like to unsubscribe from one or more of the email subcategories, they are unable to do so.<br>
+            <strong>Solution: </strong>To work around the obstacle imposed by Mailgun's API, the code</p>
+          </div>
         </div>
       </template>
     </project>
@@ -104,7 +133,7 @@
 
 <style scoped>
 .grey {
-  background-color: rgb(98, 227, 235);
+  background-color: rgb(92, 138, 219);
   height: 100%;
   width: 100%;
   display: flex;
@@ -131,7 +160,7 @@
   color: rgb(237, 172, 0);
 }
 
-.planning, .iterations {
+.planning, .iterations, .challenges{
   margin-top: 40px;
   width: 100%;
 }
@@ -196,5 +225,39 @@
   background-color: transparent;
   padding: 0;
   border: none;
+}
+
+.iteration-img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.num {
+  border: black solid 2px;
+  border-radius: 500px; 
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.num > * {
+  margin: 0;
+}
+
+table {
+  margin: 30px 0;
+}
+
+table > tr {
+  vertical-align: top;
+  color: #6D6D6D;
 }
 </style>
