@@ -100,12 +100,12 @@
               <div class="num"><h5>1</h5></div>
               <div>
                 <p class="adj">mailgun API</p>
-                <h4>Opting into subcategories</h4>
+                <h4>Opting into categories</h4>
               </div>
             </div>
             <hr>
-            <p><strong>Challenge: </strong>If a user is subscribed to all emails, in Mailgun their preferences include a '*' tag. If this user updates would like to unsubscribe from one or more of the email subcategories, they are unable to do so.<br>
-            <strong>Solution: </strong>To work around the obstacle imposed by Mailgun's API, the code</p>
+            <p><strong>Challenge: </strong>If a user is unsubscribed to all emails, in Mailgun their preferences include a '*' tag. If this user would like to re-subscribe to one or more of the email subcategories, they are unable to do so.<br>
+            <strong>Solution: </strong>To work around the obstacle imposed by Mailgun's API, if a user's preferences included the '*' tag, upon submitting the updated form, a preliminary call was made to resubscribe the user to all emails, followed by a secondary call made to unsubcribe users from the specific email tags they had chosen. While this wasn't the most elegant solution, the work around was necessary to overcome the Mailgun obstacle, and achieved its purpose.</p>
           </div>
         </div>
       </template>
