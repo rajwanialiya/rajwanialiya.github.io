@@ -47,32 +47,41 @@
           <h2>Planning</h2>
           <div class="row">
             <div class="col border"><b-button v-b-modal.modal-1 class="light-box">
-              <img class="wireframe" src='../assets/wireframe1.png'>
+              <img class="wireframe" src='../assets/tb-wireframe1.jpg'>
               <div class="go-corner">
                 <h4 class="go-arrow">→</h4>
               </div>
             </b-button></div>
             <div class="col border"><b-button v-b-modal.modal-2 class="light-box">
-              <img class="wireframe" src='../assets/wireframe2.png'>
+              <img class="wireframe" src='../assets/tb-wireframe2.jpg'>
               <div class="go-corner">
                 <h4 class="go-arrow">→</h4>
               </div>
             </b-button></div>
             <div class="col border"><b-button v-b-modal.modal-3 class="light-box">
-              <img class="wireframe" src='../assets/wireframe3.png'>
+              <img class="wireframe" src='../assets/tb-wireframe3.jpg'>
+              <div class="go-corner">
+                <h4 class="go-arrow">→</h4>
+              </div>
+            </b-button></div>
+            <div class="col border"><b-button v-b-modal.modal-4 class="light-box">
+              <img class="wireframe" src='../assets/tb-wireframe4.jpg'>
               <div class="go-corner">
                 <h4 class="go-arrow">→</h4>
               </div>
             </b-button></div>
           </div>
           <b-modal id="modal-1" size="lg" hide-footer="true" hide-header="true">
-            <img class="wireframe" src='../assets/wireframe1.png'>
+            <img class="wireframe" src='../assets/tb-wireframe1.jpg'>
           </b-modal>
           <b-modal id="modal-2" size="lg" hide-footer=true hide-header=true>
-            <img class="wireframe" src='../assets/wireframe2.png'>
+            <img class="wireframe" src='../assets/tb-wireframe2.jpg'>
           </b-modal>
           <b-modal id="modal-3" size="lg" hide-footer=true hide-header=true>
-            <img class="wireframe" src='../assets/wireframe3.png'>
+            <img class="wireframe" src='../assets/tb-wireframe3.jpg'>
+          </b-modal>
+          <b-modal id="modal-4" size="lg" hide-footer=true hide-header=true>
+            <img class="wireframe" src='../assets/tb-wireframe4.jpg'>
           </b-modal>
         </div>
         <div class="iterations">
@@ -97,7 +106,7 @@
           </div>
           <div class="step">
             <div class="top">
-              <div class="num"><h5>1</h5></div>
+              <div class="num"><h5>2</h5></div>
               <div>
                 <p class="adj">mailgun API</p>
                 <h4>Opting into categories</h4>
@@ -259,5 +268,9 @@ table {
 table > tr {
   vertical-align: top;
   color: #6D6D6D;
+}
+
+.planning .row {
+  margin-bottom: 30px;
 }
 </style>
