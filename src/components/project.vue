@@ -1,52 +1,62 @@
 <template>
-  <div class="page-wrap">
-    <div id="header" class="header"><slot name="img"></slot></div>
-    <div class="page-content">
-      <div class="intro">
-        <div class="title">
-          <h2><slot name="title"></slot></h2>
-          <p><slot name="category"></slot></p>
-        </div>
-        <p><slot name="description"></slot></p>
+  <div>
+    <div class="mobile">
+      <img class="moon" src="./assets/circle.svg">
+      <div class="message">
+        <h3>Hey there</h3>
+        <h5>This page is currently under construction</h5>
+        <p>To learn more about this project, visit this page on a larger screen or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
       </div>
-      <div class="logo"><slot name="logo"></slot></div>
-      <div class="overview">
-        <div class="row">
-          <div class="col">
-            <h5 class="black">Role</h5>
-            <div class="list"><slot name="role"></slot></div>
-          </div>
-          <div class="col">
-            <h5 class="black">Timeline</h5>
-            <div class="list"><slot name="timeline"></slot></div>
-          </div>
-          <div class="col">
-            <h5 class="black">Challenge</h5>
-            <div class="list"><slot name="challenge"></slot></div>
-          </div>
-          <div class="col">
-            <h5 class="black">Tools</h5>
-            <div class="list"><slot name="tools"></slot></div>
-          </div>
-          <!-- <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
-          <p>https://encry.com/use-cases/</p> --> 
-        </div>
-      </div>
-      <div class="goals">
-        <slot name="goals"></slot>
-      </div>
-      <div class="requirements">
-        <slot name="requirements"></slot>
-      </div>
-      <slot class="other" name="other"></slot>
     </div>
-    <div class="bottom-nav">
-      <h3 class="bgd-text">more</h3>
-      <div class="prev-proj">
-        <slot name="prev-proj"><router-link to='/'></router-link></slot>
+    <div class="page-wrap not-mobile">
+      <div id="header" class="header"><slot name="img"></slot></div>
+      <div class="page-content">
+        <div class="intro">
+          <div class="title">
+            <h2><slot name="title"></slot></h2>
+            <p><slot name="category"></slot></p>
+          </div>
+          <p><slot name="description"></slot></p>
+        </div>
+        <div class="logo"><slot name="logo"></slot></div>
+        <div class="overview">
+          <div class="row">
+            <div class="col">
+              <h5 class="black">Role</h5>
+              <div class="list"><slot name="role"></slot></div>
+            </div>
+            <div class="col">
+              <h5 class="black">Timeline</h5>
+              <div class="list"><slot name="timeline"></slot></div>
+            </div>
+            <div class="col">
+              <h5 class="black">Challenge</h5>
+              <div class="list"><slot name="challenge"></slot></div>
+            </div>
+            <div class="col">
+              <h5 class="black">Tools</h5>
+              <div class="list"><slot name="tools"></slot></div>
+            </div>
+            <!-- <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
+            <p>https://encry.com/use-cases/</p> --> 
+          </div>
+        </div>
+        <div class="goals">
+          <slot name="goals"></slot>
+        </div>
+        <div class="requirements">
+          <slot name="requirements"></slot>
+        </div>
+        <slot class="other" name="other"></slot>
       </div>
-      <div class="next-proj">
-        <slot name="next-proj"><router-link to='/'></router-link></slot>
+      <div class="bottom-nav">
+        <h3 class="bgd-text">more</h3>
+        <div class="prev-proj">
+          <slot name="prev-proj"><router-link to='/'></router-link></slot>
+        </div>
+        <div class="next-proj">
+          <slot name="next-proj"><router-link to='/'></router-link></slot>
+        </div>
       </div>
     </div>
   </div>
@@ -183,5 +193,40 @@ hr {
   position: absolute; 
   top: 40%;
   left: 50%;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .not-mobile {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(214, 226, 245);
+  }
+
+  .moon {
+    position: absolute;
+    top: 24vh;
+    left: 10vw;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 22vw;
+    height: 100vh;
+    justify-content: center;
+    width: 400px;
+    margin-right: 24px;
+  }
 }
 </style>

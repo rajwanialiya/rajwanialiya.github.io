@@ -117,7 +117,7 @@
         <router-link to='/flashfood-site'><div class="prev-proj"></div></router-link>
       </template>
       <template slot="next-proj">
-        <router-link to='/'><div class="next-proj"></div></router-link>
+        <router-link to='/tb-email-preferences'><div class="next-proj"></div></router-link>
       </template>
     </project>
   </div>

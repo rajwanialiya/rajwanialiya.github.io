@@ -118,6 +118,12 @@
           </div>
         </div>
       </template>
+      <template slot="prev-proj">
+        <router-link to='/flashfood-counter'><div class="prev-proj"></div></router-link>
+      </template>
+      <template slot="next-proj">
+        <router-link to='/flashfood-site'><div class="next-proj"></div></router-link>
+      </template>
     </project>
   </div>
 </template>
