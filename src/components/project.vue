@@ -4,7 +4,7 @@
       <img class="moon" src="./assets/circle.svg">
       <div class="message">
         <h3>Hey there</h3>
-        <h5>This page is currently under construction</h5>
+        <h6>This page is currently under construction</h6>
         <p>To learn more about this project, visit this page on a larger screen or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
       </div>
     </div>
@@ -206,27 +206,28 @@ hr {
 
   .mobile {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
     background-color: rgb(214, 226, 245);
+    overflow: hidden;
   }
 
   .moon {
-    position: absolute;
+    position: fixed;
     top: 24vh;
-    left: 10vw;
+    left: 2%;
   }
   
   .message {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 10vh;
-    left: 22vw;
-    height: 100vh;
+    position: relative;
     justify-content: center;
-    width: 400px;
-    margin-right: 24px;
+    top: 50vh;
+    left: 25%;
+    padding-right: 24px;
+    max-width: 80%;
   }
 }
 </style>

@@ -64,7 +64,6 @@ export default {
   background-position: center;
   height: 30px;
   min-width: 30px;
-  // opacity: 0.4;
   margin-right: 5px;
 }
 
@@ -72,6 +71,15 @@ export default {
   filter: invert(100%);
 }
 
+@media screen and (max-width: 900px) {
+  #sidebar {
+    padding: 24px;
+  }
+
+  .invert {
+    filter: none;
+  }
+}
 /*
 .project-name {
   font-size: 70px;
