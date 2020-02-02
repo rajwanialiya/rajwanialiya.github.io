@@ -5,7 +5,7 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
-      <project-left class="section fp-auto-height">
+      <project-left id="work" class="section fp-auto-height">
         <template slot="description">
           <div class="image">
             <router-link to="tb-email-preferences"><img src="../assets/tunnelbear-mockup.svg"></router-link>
@@ -13,7 +13,7 @@
           <div class="writing">
             <div class="intro">
               <p>Web Development & API</p>
-              <h2>Email Preferences Centre</h2>
+              <h2><router-link to="tb-email-preferences">Email Preferences Centre</router-link></h2>
             </div>
             <div class="main">
               <p class="blurb">This email preferences centre offers an intuitive and simple method for TunnelBear users to opt in and out of emails. The solution uses logic implemented on the front-end and interaction with the back-end to personalize the methods provided by Mailgun's API to fit the feature's needs.</p>
@@ -36,7 +36,7 @@
           <div class="writing">
             <div class="intro">
               <p>Machine Learning & Web Development</p>
-              <h2>Exstrahlen</h2>
+              <h2><a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank">Exstrahlen</a></h2>
             </div>
             <div class="main">
               <div>
@@ -64,7 +64,7 @@
           <div class="writing">
             <div class="intro">
               <p>Web Development & UI/UX</p>
-              <h2>Flashfood.com</h2>
+              <h2><router-link to="flashfood-site">Flashfood.com</router-link></h2>
             </div>
             <div class="main">
               <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
@@ -88,7 +88,7 @@
           <div class="writing">
             <div class="intro">
               <p>Web Development & Back-End</p>
-              <h2>Food Waste Counter</h2>
+              <h2><router-link to="flashfood-counter">Food Waste Counter</router-link></h2>
             </div>
             <div class="main">
               <div>
@@ -118,7 +118,7 @@
           <div class="writing">
             <div class="intro">
               <p>App Development & UI/UX</p> 
-              <h2>Nailed It</h2>
+              <h2><a href="https://github.com/rajwanialiya/hackxplore">Nailed It</a></h2>
             </div>
             <div class="main">
               <p class="blurb">“Nailed It” is a collaboratively developed app that uses open-source machine learning libraries and Python to perform early-stage diagnosis of anemia, oxygen deprivation illnesses, and various infections by analyzing the colour discrepancy between users' skin and nails.</p>
