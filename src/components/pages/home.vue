@@ -5,6 +5,30 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
+      <project-right class="section fp-auto-height">
+        <template id="work" slot="description">
+          <div class="writing">
+            <div class="intro">
+              <p>Mobile App Development</p>
+              <h2><a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank">ChowTime</a></h2>
+            </div>
+            <div class="main">
+              <div>
+                <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank" class="code two"><img src="../assets/code.png"></a>
+              </div>
+              <p class="blurb project-1">Designed and developed a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app uses an object detection model to identify and analyze abnormalities in chest scans.</p>
+            </div>
+            <ul class="skills second">
+              <li>Object Detection</li>
+              <li>Image Classification</li>
+              <li>React Native</li>
+            </ul>
+          </div>
+          <div class="image">
+            <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank"><img src="../assets/chowtime-mockup.svg"></a>
+          </div>
+        </template>
+      </project-right>
       <project-left id="work" class="section fp-auto-height">
         <template slot="description">
           <div class="image">
@@ -12,11 +36,11 @@
           </div>
           <div class="writing">
             <div class="intro">
-              <p>Web Development & API</p>
+              <p>Web Development</p>
               <h2><router-link to="tb-email-preferences">Email Preferences Centre</router-link></h2>
             </div>
             <div class="main">
-              <p class="blurb">This email preferences centre offers an intuitive and simple method for TunnelBear users to opt in and out of emails. The solution uses logic implemented on the front-end and interaction with the back-end to personalize the methods provided by Mailgun's API to fit the feature's needs.</p>
+              <p class="blurb">Developed an email preferences centre to offer an intuitive and simple method for TunnelBear users to opt in and out of emails. On the front-end, the solution offers an interactive experience and leverages methods provided by Mailgun's API to fit the feature's needs.</p>
               <div>
                 <router-link to="tb-email-preferences" class="visit"><img src="../assets/casestudy.svg"></router-link>
                 <a href= "https://www.tunnelbear.com/email-preferences" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
@@ -24,9 +48,9 @@
               </div>
               <ul class="skills">
                 <li>Vue</li>
+                <li>Node.js</li>
+                <li>REST API</li>
                 <li>UX</li>
-                <li>API Interaction</li>
-                <li>UI</li>
               </ul>
             </div>
         </template>
@@ -42,10 +66,10 @@
               <div>
                 <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
-              <p class="blurb project-1">Exstrahlen is a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app achieves this through a convolutional neural network to identify and analyze abnormalities in chest scans.</p>
+              <p class="blurb project-1">Designed and developed a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app uses an object detection model to identify and analyze abnormalities in chest scans.</p>
             </div>
             <ul class="skills second">
-              <li>Machine Learning</li>
+              <li>Object Detection</li>
               <li>Node.js</li>
               <li>Vue</li>
               <li>GCP</li>
@@ -67,7 +91,7 @@
               <h2><router-link to="flashfood-site">Flashfood.com</router-link></h2>
             </div>
             <div class="main">
-              <p class="blurb">As Flashfood grew to reach a wider audience, its brand evolved and features were added to the app. My task for this project was to work with the Head of Product & Design and the company's CTO to design and implement a scalable updated main website that reflected these changes.</p>
+              <p class="blurb">Designed and developed a scalable and responsive main website to reflect Flashfood's evolving brand.</p>
               <div>
                 <router-link to="flashfood-site" class="visit"><img src="../assets/casestudy.svg"></router-link>
                 <a href="https://www.flashfood.com/" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
@@ -95,7 +119,7 @@
                 <router-link to="flashfood-counter" class="visit two"><img src="../assets/casestudy.svg"></router-link>
                 <a href="https://www.flashfood.com/" target="_blank" class="visit two"><img src="../assets/globe.svg"></a>
               </div>
-              <p class="blurb">This real-time counter displays the amount of food waste diverted from landfills by Flashfood users. To build this feature I connected the counter to the Flashfood database, created an API endpoint to embed the counter, and designed and animated the count-up to increase interactivity.</p>
+              <p class="blurb">Built a real-time counter to display the amount of food waste diverted from landfills by Flashfood users. Retrieved relevant information from Flashfood's database, created an API endpoint to embed the counter, and animated the count-up to increase interactivity.</p>
             </div>
             <ul class="skills second">
               <li>Javascript</li>
@@ -204,18 +228,19 @@ export default {
       var canvas = document.querySelector('#canvas')
       var context = canvas.getContext('2d')
       context.fillStyle = '#f4f7fc'
-      // console.log(this.classList)
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#AED9CB"
+        context.fillStyle = "#fff3c9"
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#d6e2f5"
+        context.fillStyle = "#AED9CB"
       } else if (document.body.classList.contains('fp-viewing-3')) {
-        context.fillStyle = "#e5c8ff"
+        context.fillStyle = "#d6e2f5"
       } else if (document.body.classList.contains('fp-viewing-4')) {
-        context.fillStyle = "#FFAFD1"
+        context.fillStyle = "#dfdaed"
       } else if (document.body.classList.contains('fp-viewing-5')) {
+        context.fillStyle = "#ffc4c4"
+      } else if (document.body.classList.contains('fp-viewing-6')) {
         context.fillStyle = "#f7cf8b"
       }
       

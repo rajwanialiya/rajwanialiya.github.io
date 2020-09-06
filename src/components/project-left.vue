@@ -44,9 +44,9 @@ export default {
   right: 4vw;
 }
 
-.image a{
+.image > a {
   width: 100%; 
-  height: 100%; 
+  height: 40px;
 }
 
 .image img{

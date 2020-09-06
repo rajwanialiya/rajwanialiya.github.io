@@ -1,10 +1,9 @@
 <template>
   <div class="scroll" :class="opacity">
-    <a href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/" target="_blank"><div class="socials linkedin"></div></a>
-    <a href="https://github.com/rajwanialiya" target="_blank"><div class="socials github"></div></a>
-    <a href="mailto:rajwani.aliya@gmail.com"><div class="socials email"></div></a>
+    <div class="socials linkedin"><a href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/" target="_blank"/></div>
+    <div class="socials github"><a href="https://github.com/rajwanialiya" target="_blank"/></div>
+    <div class="socials email"><a href="mailto:rajwani.aliya@gmail.com"/></div>
     <div class="socials mouse"></div>
-    <!-- <p class="text">Scrolldown</p> -->
     <svg version="1.1" class="line" height="110" width="40">
       <line x1="20" y1="0" x2="20" y2="110"/>
       <line x1="20" y1="110" x2="13" y2="102"/>
@@ -31,7 +30,7 @@ export default {
   position: fixed; 
   bottom: 40px; 
   left: 40px; 
-  z-index: 2; 
+  z-index: 4; 
 }
 
 .socials {

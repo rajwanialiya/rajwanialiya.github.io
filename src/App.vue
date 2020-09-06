@@ -31,6 +31,16 @@ export default {
       circle.style.left = posX + 'px';
       prev.style.display = 'none'
       next.style.display = 'none'
+      
+      circle.style.height = "15px"
+      circle.style.width = "15px"
+
+      if (ev.target.tagName === "A" || (ev.target.firstChild && ev.target.firstChild.tagName === "A") || ev.target.className === "a" || (ev.target.parentNode && ev.target.parentNode.tagName === "A")) {
+        circle.style.transform = "scale(1.5) perspective(1px)"
+      } else {
+        circle.style.transform = "scale(1) perspective(1px)"
+      }
+
       // var elements = document.getElementsByTagName('a')
 
       
@@ -61,10 +71,12 @@ export default {
           prev.style.display = 'none'
           next.style.display = 'block'
         }
-      } else {
-        circle.style.width = ''
-        circle.style.height = ''
-      }
+      } 
+      
+      // else {
+      //   circle.style.width = ''
+      //   circle.style.height = ''
+      // }
     }
   }
 }
@@ -77,6 +89,14 @@ export default {
 
 body {
   line-height: 1.7em;
+}
+
+a {
+  z-index: 10;
+}
+
+a:hover {
+  cursor: none;
 }
 
 .fp-tableCell {

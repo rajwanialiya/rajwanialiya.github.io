@@ -36,7 +36,7 @@ export default {
   align-items: space-between;
   position: fixed; 
   width: 100%; 
-  z-index: 100; 
+  z-index: 3; 
   height: 100%;
 }
 

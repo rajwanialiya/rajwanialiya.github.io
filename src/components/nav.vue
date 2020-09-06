@@ -8,7 +8,7 @@
         <!-- <b-nav-item>Work</b-nav-item> -->
         <!-- <b-nav-item>View Rand.</b-nav-item> Squarify? Trinaglify?-->
         <b-nav-item href="https://drive.google.com/file/d/1MH46qGzZ3ZjoCoZ1Xdn9oVrWwfwFRWqe/view?usp=sharing" target="_blank">Resume</b-nav-item>
-        <b-nav-item-dropdown right text="Get In Touch" class="dropdown">
+        <b-nav-item-dropdown right text="Get In Touch" class="dropdown a">
           <b-dropdown-item href="mailto:rajwani.aliya@gmail.com">Email</b-dropdown-item>
           <div class="dropdown-divider"></div>
           <b-dropdown-item target="_blank" href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/">LinkedIn</b-dropdown-item>
