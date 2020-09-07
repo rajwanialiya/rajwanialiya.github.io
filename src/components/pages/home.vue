@@ -13,14 +13,16 @@
               <h2><a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank">ChowTime</a></h2>
             </div>
             <div class="main">
-              <div>
-                <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank" class="code two"><img src="../assets/code.png"></a>
+              <div class="column">
+                <a href="https://play.google.com/store/apps/details?id=com.yourcompany.chowtime" target="_blank" class="visit two"><img src="../assets/playstore-icon.png"></a>
+                <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank" class="visit two"><img src="../assets/appstore-icon.png"></a>
+                <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
-              <p class="blurb project-1">Designed and developed a web application that aims to reduce patient wait times by helping radiologists perform diagnostics more efficiently. The app uses an object detection model to identify and analyze abnormalities in chest scans.</p>
+              <p class="blurb project-1">Developed a mobile app in React Native that recommends healthy recipes cooked with ingredients users have on hand. Applied natural language processing techniques, optical character recognition, and object detection to identify food items in unser-uploaded images.</p>
             </div>
             <ul class="skills second">
               <li>Object Detection</li>
-              <li>Image Classification</li>
+              <li>NLP</li>
               <li>React Native</li>
             </ul>
           </div>
@@ -231,9 +233,9 @@ export default {
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#fff3c9"
+        context.fillStyle = "#c5e3d6"
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#AED9CB"
+        context.fillStyle = "#f0cca1"
       } else if (document.body.classList.contains('fp-viewing-3')) {
         context.fillStyle = "#d6e2f5"
       } else if (document.body.classList.contains('fp-viewing-4')) {
@@ -301,6 +303,11 @@ export default {
 
 .portfolio {
   margin: 0 24px;
+}
+
+.column {
+  display: flex; 
+  flex-direction: column;
 }
 
 @media screen and (max-width: 950px) {
