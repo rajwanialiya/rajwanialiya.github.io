@@ -16,6 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
+
+#navigate back (cd ../)
+# git status, git add ., git commit -m "", git push
+
 # if you are deploying to https://<USERNAME>.github.io
 git push -f git@github.com:rajwanialiya/rajwanialiya.github.io.git master
 
@@ -23,6 +27,3 @@ git push -f git@github.com:rajwanialiya/rajwanialiya.github.io.git master
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
-
-#navigate back (cd ../)
-# git status, git add ., git commit -m "", git push
