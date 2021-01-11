@@ -15,7 +15,7 @@
             <div class="main">
               <div class="column">
                 <a href="https://play.google.com/store/apps/details?id=com.yourcompany.chowtime" target="_blank" class="visit two"><img src="../assets/playstore-icon.png"></a>
-                <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank" class="visit two"><img src="../assets/appstore-icon.png"></a>
+                <a href="https://apps.apple.com/ca/app/chowtime/id1530682514" target="_blank" class="visit two"><img src="../assets/appstore-icon.png"></a>
                 <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
               <p class="blurb project-1">Developed a mobile app in React Native that recommends healthy recipes cooked with ingredients users have on hand. Applied natural language processing techniques, optical character recognition, and object detection to identify food items in unser-uploaded images.</p>
@@ -27,7 +27,7 @@
             </ul>
           </div>
           <div class="image">
-            <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank"><img src="../assets/chowtime-mockup.svg"></a>
+            <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank"><img src="../assets/chowtime-mockup.svg"></a>
           </div>
         </template>
       </project-right>

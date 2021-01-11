@@ -23,3 +23,6 @@ git push -f git@github.com:rajwanialiya/rajwanialiya.github.io.git master
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+
+#navigate back (cd ../)
+# git status, git add ., git commit -m "", git push
