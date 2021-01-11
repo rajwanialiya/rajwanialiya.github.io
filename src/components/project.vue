@@ -5,7 +5,7 @@
       <div class="message">
         <h3>Hey there</h3>
         <h6>This page is currently under construction</h6>
-        <p>To learn more about this project, visit this page on a larger screen or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
+        <p>To learn more about this project visit this page on a larger screen or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
       </div>
     </div>
     <div class="page-wrap not-mobile">
