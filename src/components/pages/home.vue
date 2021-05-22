@@ -5,11 +5,35 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
+      <project-left id="work" class="section fp-auto-height">
+        <template slot="description">
+          <div class="image">
+            <router-link to="tb-email-preferences"><img src="../assets/vax-notifs-mockup.svg"></router-link>
+          </div>
+          <div class="writing">
+            <div class="intro">
+              <p>Databases & Web/Mobile Development</p>
+              <h2><router-link to="tb-email-preferences">Vaccine Notifications</router-link></h2>
+            </div>
+            <div class="main">
+              <p class="blurb">Developed a mobile app and website to send targetted notifications about COVID-19 vaccine appointments based on users' age/eligibility groups and location. Endorsed by the University of Toronto and University Health Network.</p>
+              <div>
+                <a href= "https://vaccinenotifications.org/" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
+              </div>
+              </div>
+              <ul class="skills">
+                <li>Firestore</li>
+                <li>Database Architecture</li>
+                <li>React Native</li>
+              </ul>
+            </div>
+        </template>
+      </project-left>
       <project-right class="section fp-auto-height">
         <template id="work" slot="description">
           <div class="writing">
             <div class="intro">
-              <p>Mobile App Development</p>
+              <p>Machine Learning & Mobile App Development</p>
               <h2><a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank">ChowTime</a></h2>
             </div>
             <div class="main">
@@ -18,11 +42,11 @@
                 <a href="https://apps.apple.com/ca/app/chowtime/id1530682514" target="_blank" class="visit two"><img src="../assets/appstore-icon.png"></a>
                 <a href="https://github.com/rajwanialiya/Chowtime-App" target="_blank" class="code two"><img src="../assets/code.png"></a>
               </div>
-              <p class="blurb project-1">Developed a mobile app in React Native that recommends healthy recipes cooked with ingredients users have on hand. Applied natural language processing techniques, optical character recognition, and object detection to identify food items in unser-uploaded images.</p>
+              <p class="blurb project-1">Developed a mobile app in React Native that recommends healthy recipes cooked with ingredients users have on hand. Applied natural language processing techniques, optical character recognition, and object detection to identify food items in user-uploaded images.</p>
             </div>
             <ul class="skills second">
-              <li>Object Detection</li>
-              <li>NLP</li>
+              <li>TensorFlow</li>
+              <li>Google Vision</li>
               <li>React Native</li>
             </ul>
           </div>
@@ -233,16 +257,18 @@ export default {
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#c5e3d6"
+        context.fillStyle = "#e6eefc" 
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#f0cca1"
+        context.fillStyle = "#c5e3d6"
       } else if (document.body.classList.contains('fp-viewing-3')) {
-        context.fillStyle = "#d6e2f5"
+        context.fillStyle = "#f0cca1"
       } else if (document.body.classList.contains('fp-viewing-4')) {
-        context.fillStyle = "#dfdaed"
+        context.fillStyle = "#d6e2f5"
       } else if (document.body.classList.contains('fp-viewing-5')) {
-        context.fillStyle = "#ffc4c4"
+        context.fillStyle = "#dfdaed"
       } else if (document.body.classList.contains('fp-viewing-6')) {
+        context.fillStyle = "#ffc4c4"
+      } else if (document.body.classList.contains('fp-viewing-7')) {
         context.fillStyle = "#f7cf8b"
       }
       

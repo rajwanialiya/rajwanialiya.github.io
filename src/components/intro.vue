@@ -53,14 +53,14 @@ export default {
       var parallax = new Parallax(scene);
     }, 
     typed: function () {
-      var start = "I'm a Systems Design Engineering student at the University of Waterloo and an aspiring developer. I'm interested in "
-      var one = start + "using technology to address global issues"; 
-      var two = start + "developing an interdisciplinary skillset"; 
+      var start = "I'm an engineering student at the University of Waterloo and a software developer. I'm passionate about "
+      var one = start + 
+      "applying the valuable skills I've gained, while continuing to learn how to leverage new technology"; 
+      var two = start + "using technology to positively impact day-to-day life"; 
     // var three = "improving our relationship with technology"; 
-      var four = start + "producing strong responsive and interactive design"; 
-      var five = start + "exploring the use of technology to develop holistic solutions"
+      var four = start + "developing an interdisciplinary skillset; my current interest is in machine learning/AI."; 
 
-    var text = [one, two, four, five]
+    var text = [one, two, four]
 
     var typed = new Typed("#typed", {
         strings: text,

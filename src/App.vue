@@ -36,7 +36,7 @@ export default {
       circle.style.width = "15px"
 
       if (ev.target.tagName === "A" || (ev.target.firstChild && ev.target.firstChild.tagName === "A") || ev.target.className === "a" || (ev.target.parentNode && ev.target.parentNode.tagName === "A")) {
-        circle.style.transform = "scale(1.5) perspective(1px)"
+        circle.style.transform = "scale(2) perspective(1px)"
       } else {
         circle.style.transform = "scale(1) perspective(1px)"
       }
