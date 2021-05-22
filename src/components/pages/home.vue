@@ -273,7 +273,9 @@ export default {
       }
       
       this.mouseX = event.clientX
+      // this.mouseY = event.clientY
       this.mouseY = event.clientY
+
       window.requestAnimationFrame(this.update)
     },
     clear: function () {
