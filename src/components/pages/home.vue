@@ -81,7 +81,7 @@
             </div>
         </template>
       </project-left>
-      <project-right class="section fp-auto-height">
+      <!-- <project-right class="section fp-auto-height">
         <template id="work" slot="description">
           <div class="writing">
             <div class="intro">
@@ -105,7 +105,7 @@
             <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank"><img src="../assets/exstrahlen-mockup.svg"></a>
           </div>
         </template>
-      </project-right>
+      </project-right> -->
       <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
@@ -160,7 +160,7 @@
           </div>
         </template>
       </project-right>
-      <project-left class="section fp-auto-height">
+      <!-- <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
             <a href="https://github.com/rajwanialiya/hackxplore"><img src="../assets/nailed-it-mockup.svg"></a>
@@ -185,7 +185,7 @@
               </ul>
             </div>
         </template>
-      </project-left>
+      </project-left> -->
     </full-page>
   </div>
 </template>
@@ -257,19 +257,21 @@ export default {
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
       } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#e6eefc" 
+        context.fillStyle = "#e6eefc"  
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#c5e3d6"
+        context.fillStyle = "#e6eefc" 
       } else if (document.body.classList.contains('fp-viewing-3')) {
-        context.fillStyle = "#f0cca1"
+        context.fillStyle = "#c5e3d6"
       } else if (document.body.classList.contains('fp-viewing-4')) {
-        context.fillStyle = "#d6e2f5"
+        context.fillStyle = "#f0cca1"
+      // } else if (document.body.classList.contains('fp-viewing-4')) {
+      //   context.fillStyle = "#d6e2f5"
       } else if (document.body.classList.contains('fp-viewing-5')) {
         context.fillStyle = "#dfdaed"
       } else if (document.body.classList.contains('fp-viewing-6')) {
         context.fillStyle = "#ffc4c4"
-      } else if (document.body.classList.contains('fp-viewing-7')) {
-        context.fillStyle = "#f7cf8b"
+      // } else if (document.body.classList.contains('fp-viewing-6')) {
+      //   context.fillStyle = "#f7cf8b"
       }
       
       this.mouseX = event.clientX
