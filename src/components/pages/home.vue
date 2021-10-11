@@ -5,6 +5,30 @@
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
+      <project-right class="section fp-auto-height">
+        <template id="work" slot="description">
+          <div class="writing">
+            <div class="intro">
+              <p>Freelance Web Design & Development</p>
+              <h2><a href="https://www.jxshooter.com/" target="_blank">Jxshooter Website</a></h2>
+            </div>
+            <div class="main">
+              <div class="column">
+                <a href= "https://www.jxshooter.com/" target="_blank" class="visit two"><img src="../assets/globe.svg"></a>
+              </div>
+              <p class="blurb project-1">Worked with a local photographer to design and develop a responsive website showcasing his work. Iterated on designs based on feedback sessions and client requests to ensure the site aligned with their brand image, and they could easily update content.</p>
+            </div>
+            <ul class="skills second">
+              <li>Iterative Design</li>
+              <li>UI & UX</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+          <div class="image">
+            <a href="https://www.jxshooter.com/" target="_blank"><img src="../assets/photography-mockup.svg"></a>
+          </div>
+        </template>
+      </project-right>
       <project-left id="work" class="section fp-auto-height">
         <template slot="description">
           <div class="image">
@@ -18,7 +42,7 @@
             <div class="main">
               <p class="blurb">Developed a mobile app and website to send targetted notifications about COVID-19 vaccine appointments based on users' age/eligibility groups and location. Endorsed by the University of Toronto and University Health Network.</p>
               <div>
-                <a href= "https://vaccinenotifications.org/" target="_blank" class="visit"><img src="../assets/globe.svg"></a>
+                <a href= "https://vaccinenotifications.org/" target="_blank" class="visit two"><img src="../assets/globe.svg"></a>
               </div>
               </div>
               <ul class="skills">
@@ -81,7 +105,7 @@
             </div>
         </template>
       </project-left>
-      <project-right class="section fp-auto-height">
+      <!-- <project-right class="section fp-auto-height">
         <template id="work" slot="description">
           <div class="writing">
             <div class="intro">
@@ -105,7 +129,7 @@
             <a href="https://github.com/rajwanialiya/Exstrahlen/blob/master/README.md" target="_blank"><img src="../assets/exstrahlen-mockup.svg"></a>
           </div>
         </template>
-      </project-right>
+      </project-right> -->
       <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
@@ -160,7 +184,7 @@
           </div>
         </template>
       </project-right>
-      <project-left class="section fp-auto-height">
+      <!-- <project-left class="section fp-auto-height">
         <template slot="description">
           <div class="image">
             <a href="https://github.com/rajwanialiya/hackxplore"><img src="../assets/nailed-it-mockup.svg"></a>
@@ -185,7 +209,7 @@
               </ul>
             </div>
         </template>
-      </project-left>
+      </project-left> -->
     </full-page>
   </div>
 </template>
@@ -256,11 +280,11 @@ export default {
       context.fillStyle = '#f4f7fc'
       if (document.body.classList.contains('fp-viewing-0')) {
         context.clearRect(0, 0, canvas.width, canvas.height)
-      } else if (document.body.classList.contains('fp-viewing-1')) {
-        context.fillStyle = "#e6eefc" 
       } else if (document.body.classList.contains('fp-viewing-2')) {
-        context.fillStyle = "#c5e3d6"
+        context.fillStyle = "#e6eefc" 
       } else if (document.body.classList.contains('fp-viewing-3')) {
+        context.fillStyle = "#c5e3d6"
+      } else if (document.body.classList.contains('fp-viewing-4')) {
         context.fillStyle = "#f0cca1"
       } else if (document.body.classList.contains('fp-viewing-4')) {
         context.fillStyle = "#d6e2f5"
@@ -268,7 +292,7 @@ export default {
         context.fillStyle = "#dfdaed"
       } else if (document.body.classList.contains('fp-viewing-6')) {
         context.fillStyle = "#ffc4c4"
-      } else if (document.body.classList.contains('fp-viewing-7')) {
+      } else if (document.body.classList.contains('fp-viewing-1')) {
         context.fillStyle = "#f7cf8b"
       }
       
