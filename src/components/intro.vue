@@ -242,7 +242,7 @@ li {
 @media screen and (max-width: 950px) {
   #firstCircle, #secondCircle{
     display: none !important;
-  }, 
+  }
   
   .layer h1 {
     font-size: 20px !important;
