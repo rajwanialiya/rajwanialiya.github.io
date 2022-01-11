@@ -7,7 +7,7 @@
       <b-navbar-nav class="ml-auto">
         <!-- <b-nav-item>Work</b-nav-item> -->
         <!-- <b-nav-item>View Rand.</b-nav-item> Squarify? Trinaglify?-->
-        <b-nav-item href="bit.ly/Aliya-Rajwani-Resume" target="_blank">Resume</b-nav-item>
+        <b-nav-item href="https://drive.google.com/file/d/1VCrjXPVA6mN3mkSdrnpstfSxIZk0NoUH/view?usp=sharing" target="_blank">Resume</b-nav-item>
         <b-nav-item-dropdown right text="Get In Touch" class="dropdown a">
           <b-dropdown-item href="mailto:rajwani.aliya@gmail.com">Email</b-dropdown-item>
           <div class="dropdown-divider"></div>
