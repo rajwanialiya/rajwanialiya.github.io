@@ -5,7 +5,7 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item class="nav-item invert"><router-link to="/">Home</router-link></b-nav-item>
         <b-nav-item class="nav-item invert" href="#work"><router-link to="/">Work</router-link></b-nav-item>
-        <b-nav-item class="nav-item invert" href="https://drive.google.com/file/d/18Z5sGLoGEq5niFukffjmcifAUxfob28c/view?usp=sharing" target="_blank">Resume</b-nav-item>
+        <b-nav-item class="nav-item invert" href="bit.ly/Aliya-Rajwani-Resume" target="_blank">Resume</b-nav-item>
         <b-nav-item class="talk nav-item invert" href="mailto:rajwani.aliya@gmail.com">
           <div></div>
          <!-- Let's Talk -->
