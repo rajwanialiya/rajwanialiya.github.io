@@ -1,11 +1,14 @@
 <template>
   <div>
     <div class="mobile">
-      <img class="moon" src="./assets/circle.svg">
+      <img class="moon" src="./assets/circle.svg" />
       <div class="message">
         <h3>Hey there</h3>
         <h6>This page is currently under construction</h6>
-        <p>To learn more about this project visit this page on a larger screen or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
+        <p>
+          To learn more about this project visit this page on a larger screen or
+          get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a>
+        </p>
       </div>
     </div>
     <div class="page-wrap not-mobile">
@@ -38,7 +41,7 @@
               <div class="list"><slot name="tools"></slot></div>
             </div>
             <!-- <p>https://leloi.ca/fr/artistes/detail/baillat/</p>
-            <p>https://encry.com/use-cases/</p> --> 
+            <p>https://encry.com/use-cases/</p> -->
           </div>
         </div>
         <div class="goals">
@@ -52,15 +55,15 @@
       <div class="bottom-nav">
         <h3 class="bgd-text">more</h3>
         <div class="prev-proj">
-          <slot name="prev-proj"><router-link to='/'></router-link></slot>
+          <slot name="prev-proj"><router-link to="/"></router-link></slot>
         </div>
         <div class="next-proj">
-          <slot name="next-proj"><router-link to='/'></router-link></slot>
+          <slot name="next-proj"><router-link to="/"></router-link></slot>
         </div>
       </div>
     </div>
   </div>
-    <!-- <div id="display">
+  <!-- <div id="display">
       <li class="layer">
         <img id="moon2" src="../assets/circle.svg">
       </li>
@@ -75,31 +78,37 @@
 </template>
 
 <script>
-import Typed from 'typed.js'
+import Typed from "typed.js";
 
 export default {
-  name: 'project',
-  data () {
-    return {}
-  }, 
-  created: function () {
-    window.addEventListener('scroll', this.colorChange)
-  }, 
+  name: "project",
+  data() {
+    return {};
+  },
+  created: function() {
+    window.addEventListener("scroll", this.colorChange);
+  },
   methods: {
-    colorChange: function () {
-      var header = document.querySelector('.header')
-      var navItems = document.querySelectorAll('.nav-item')
+    colorChange: function() {
+      var header = document.querySelector(".header");
+      var navItems = document.querySelectorAll(".nav-item");
 
       for (var i = 0; i < navItems.length; i++) {
-        if (header.getBoundingClientRect().bottom + 20 > navItems[i].getBoundingClientRect().bottom) {
-          navItems[i].classList.add('invert')
-        } else if (header.getBoundingClientRect().bottom - 20 < navItems[i].getBoundingClientRect().bottom) {
-          navItems[i].classList.remove('invert')
+        if (
+          header.getBoundingClientRect().bottom + 20 >
+          navItems[i].getBoundingClientRect().bottom
+        ) {
+          navItems[i].classList.add("invert");
+        } else if (
+          header.getBoundingClientRect().bottom - 20 <
+          navItems[i].getBoundingClientRect().bottom
+        ) {
+          navItems[i].classList.remove("invert");
         }
       }
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -107,8 +116,11 @@ export default {
   color: black !important;
 }
 
-p, .gray, li, span {
-  color: #6D6D6D;
+p,
+.gray,
+li,
+span {
+  color: #6d6d6d;
 }
 
 hr {
@@ -122,9 +134,9 @@ hr {
   align-items: flex-end;
 }
 
-.page-content { 
+.page-content {
   width: 85vw;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 120px;
@@ -156,17 +168,19 @@ hr {
 
 .overview {
   width: 100%;
-  padding: 40px 0 0 0
+  padding: 40px 0 0 0;
 }
 
-.goals, .requirements {
+.goals,
+.requirements {
   margin-top: 40px;
   width: 100%;
 }
 
-#typed, .typed-cursor {
-  font-size: 22px; 
-  line-height: 44px; 
+#typed,
+.typed-cursor {
+  font-size: 22px;
+  line-height: 44px;
   height: auto;
   width: 100%;
 }
@@ -178,19 +192,19 @@ hr {
   position: relative;
 }
 
-.prev-proj{
+.prev-proj {
   height: 100%;
   width: 100%;
 }
 
-.next-proj{
+.next-proj {
   height: 100%;
   width: 100%;
 }
 
 .bgd-text {
   opacity: 0.2;
-  position: absolute; 
+  position: absolute;
   top: 40%;
   left: 50%;
   z-index: -1;
@@ -219,7 +233,7 @@ hr {
     top: 24vh;
     left: 2%;
   }
-  
+
   .message {
     display: flex;
     flex-direction: column;
