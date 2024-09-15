@@ -63,23 +63,9 @@
       </div>
     </div>
   </div>
-  <!-- <div id="display">
-      <li class="layer">
-        <img id="moon2" src="../assets/circle.svg">
-      </li>
-      <h1>Hey there</h1>
-      <h2>This page is currently under construction</h2>
-      <p>To learn more about this project, visit this page on a desktop device or get in touch <a href="mailto:rajwani.aliya@gmail.com">here</a></p>
-  </div>
-
-  <div class="WHOLE">
-  <div class="darken"></div>
-  <a class="back" href="../index.html"><img class="arrow" src="../assets/arrow.svg"></a> -->
 </template>
 
 <script>
-import Typed from "typed.js";
-
 export default {
   name: "project",
   data() {

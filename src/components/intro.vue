@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import Typed from "typed.js";
-
 export default {
   name: "intro",
   data() {

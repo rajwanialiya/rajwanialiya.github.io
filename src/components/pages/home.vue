@@ -1,12 +1,12 @@
 <template>
   <div>
     <canvas id="canvas"></canvas>
-    <nav-bar></nav-bar>
+    <nav-bar @trigger-project-scroll="addActiveClassToFirstProject"></nav-bar>
     <socials></socials>
     <full-page ref="fullpage" :options="options" id="fullpage">
       <intro ref="home" class="section intro"></intro>
       <project-display
-        :ref="project"
+        :ref="project.title"
         v-for="(project, index) in projects"
         :key="project.id"
         :project="project"
@@ -22,6 +22,7 @@ import nav from "../nav";
 import socials from "../socials";
 import intro from "../intro";
 import projectDisplay from "../project-display";
+import { nextTick } from "vue"; // Import nextTick
 
 export default {
   name: "app",
@@ -213,17 +214,6 @@ export default {
       ]
     };
   },
-  // computed: {
-  //   classList: function () {
-  //     return document.body.classList.item(0)
-  //   }
-  // },
-  // watch: {
-  //   classList: function () {
-  //     // this.clear()
-  //     console.log('change')
-  //   }
-  // },
   components: {
     "nav-bar": nav,
     socials: socials,
@@ -282,35 +272,34 @@ export default {
       var canvas = document.querySelector("#canvas");
       var context = canvas.getContext("2d");
       context.clearRect(0, 0, canvas.width, canvas.height);
-      // var screenData = context.getImageData(0, 0, canvas.width, canvas.height)
-      // var globalAlpha = 10
-      // for (let i = 3; i < screenData.data.length; i+=4) {
-      //   while (screenData.data[i] > 1) {
-      //     setTimeout (function () {
-      //       screenData.data[i] -= globalAlpha //delta-Alpha
-      //     }, 100)
-      //   }
-      // }
-      // context.putImageData(screenData, 0, 0)
-      // console.log('hey')
-
-      // console.log('clear')
-      // var canvas = document.querySelector('#canvas')
-      // var context = canvas.getContext("2d")
-      // // context.clearRect(0, 0, canvas.width, canvas.height)
-      // var alpha = 1.0
-      // while (alpha > 0) {
-      //   context.globalAlpha = alpha
-      //   alpha += -0.01
-      //   console.log('hey')
-      // }
-      // context.clearRect(0,0, canvas.width, canvas.height)
-      // requestAnimationFrame(clear)
-
-      // context.drawImage(img, 10, 10)
     },
     test: function() {
       console.log("test");
+    },
+    addActiveClassToFirstProject() {
+      this.$nextTick(() => {
+        const body = document.body;
+        body.classList.forEach(className => {
+          if (className.includes("fp-viewing")) {
+            body.classList.remove(className);
+          }
+        });
+
+        const allElements = document.querySelectorAll("*");
+        allElements.forEach(element => {
+          if (element.classList.contains("active")) {
+            element.classList.remove("active");
+          }
+        });
+
+        console.log(this.$refs.PharmaBox[0].$el);
+        if (this.$refs.PharmaBox) {
+          const firstProjectStyle = this.$refs.PharmaBox[0].$el;
+          firstProjectStyle.classList.add("active"); // Use $el to access the root DOM element of the component
+          firstProjectStyle.classList.add("active"); // Use $el to access the root DOM element of the component
+        }
+        body.classList.add("fp-viewing-1");
+      });
     }
   }
 };

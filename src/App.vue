@@ -106,6 +106,20 @@ a:hover {
   height: 100vh;
 }
 
+.dropdown-menu {
+  border: solid 0.08rem black;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ) !important; /* Semi-transparent white background */
+  backdrop-filter: blur(
+    15px
+  ) !important; /* Blurs the background behind the navbar */
+  -webkit-backdrop-filter: blur(7px) !important; /* Safari support */
+}
+
 h2,
 h3,
 h4,

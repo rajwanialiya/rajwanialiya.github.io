@@ -1,116 +1,3 @@
-<!-- <template>
-  <b-navbar toggleable="lg" type="light" class="bg-transparent fixed-top">
-    <b-navbar-brand href="#">Name</b-navbar-brand>
-
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#" class="mr-3">Resume</b-nav-item>
-
-        <b-nav-item-dropdown text="Let's Talk" right>
-          <b-dropdown-item href="#">Option 1</b-dropdown-item>
-          <b-dropdown-item href="#">Option 2</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
-</template>
-
-<script>
-export default {
-  name: "nav",
-  data() {
-    return {
-      hide: false,
-      docHeight: ""
-    };
-  },
-  created: function() {
-    this.getDocHeight();
-    window.addEventListener("scroll", this.toggleNav);
-  },
-  methods: {
-    getDocHeight: function() {
-      var D = document;
-      var height = Math.max(
-        D.body.scrollHeight,
-        D.documentElement.scrollHeight,
-        D.body.offsetHeight,
-        D.documentElement.offsetHeight,
-        D.body.clientHeight,
-        D.documentElement.clientHeight
-      );
-      this.docHeight = height;
-    },
-    toggleNav: function() {
-      var winHeight = window.innerHeight;
-      var y = window.scrollY;
-
-      if (y > winHeight / 4) {
-        this.hide = true;
-      } else {
-        this.hide = false;
-      }
-    },
-    scrollTo: function(top) {
-      window.scrollTo(0, top);
-    }
-  }
-};
-</script>
-
-<style scoped>
-.bg-transparent {
-  background-color: transparent !important;
-}
-
-.fixed-top {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1030;
-}
-
-.navbar {
-  padding: 40px 40px;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-</style>
-<!-- 
-<style scoped>
-
-
-.navbar:has(.show) {
-  background-color: white !important;
-}
-
-.navbar-brand {
-  font-size: 1.4rem;
-}
-
-button.navbar-toggler {
-  border-color: transparent;
-}
-
-.dropdown-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.display {
-  visibility: hidden;
-}
-
-.hide {
-  display: none;
-}
-</style> -->
--->
-
 <template>
   <b-navbar toggleable="lg" class="nav-wrapper">
     <b-container class="header-container">
@@ -118,14 +5,23 @@ button.navbar-toggler {
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto left-nav">
-          <b-nav-item href="#work">Work</b-nav-item>
-          <b-nav-item href="#about">About</b-nav-item>
-          <b-nav-item href="#resume">Resume</b-nav-item>
+          <!-- <b-nav-item href="" @click="triggerProjectScroll"
+            >Projects</b-nav-item
+          > -->
+          <b-nav-item
+            target="_blank"
+            href="https://drive.google.com/file/d/1VCrjXPVA6mN3mkSdrnpstfSxIZk0NoUH/view?usp=sharing"
+            >Resume</b-nav-item
+          >
           <b-nav-item-dropdown text="Let's Talk" right>
-            <b-dropdown-item href="#action/3.2">Another action</b-dropdown-item>
-            <b-dropdown-item href="#action/3.3">Something</b-dropdown-item>
-            <b-dropdown-divider></b-dropdown-divider>
-            <b-dropdown-item href="#action/3.4">Separated link</b-dropdown-item>
+            <b-dropdown-item
+              target="_blank"
+              href="https://www.linkedin.com/in/aliya-rajwani-b1466117b/"
+              >Linkedin</b-dropdown-item
+            >
+            <b-dropdown-item href="mailto:rajwani.aliya@gmail.com"
+              >Email</b-dropdown-item
+            >
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -168,6 +64,9 @@ export default {
       } else {
         this.hide = false;
       }
+    },
+    triggerProjectScroll: function() {
+      this.$emit("trigger-project-scroll");
     },
     scrollTo: function(top) {
       window.scrollTo(0, top);
